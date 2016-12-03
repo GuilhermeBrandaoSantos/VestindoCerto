@@ -29,7 +29,7 @@ public class ViewLookGerado extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         btnGerar = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnVoltarMenu = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
@@ -48,11 +48,11 @@ public class ViewLookGerado extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButton2.setText("Voltar ao menu principal");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnVoltarMenu.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btnVoltarMenu.setText("Voltar ao menu principal");
+        btnVoltarMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnVoltarMenuActionPerformed(evt);
             }
         });
 
@@ -64,7 +64,7 @@ public class ViewLookGerado extends javax.swing.JFrame {
                 .addGap(94, 94, 94)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnGerar, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnVoltarMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(68, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -73,7 +73,7 @@ public class ViewLookGerado extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(btnGerar)
                 .addGap(18, 18, 18)
-                .addComponent(jButton2)
+                .addComponent(btnVoltarMenu)
                 .addContainerGap(17, Short.MAX_VALUE))
         );
 
@@ -121,12 +121,12 @@ public class ViewLookGerado extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btnGerarActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnVoltarMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarMenuActionPerformed
 
         ViewMenu menu = new ViewMenu();;
         menu.setVisible(true);
         dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnVoltarMenuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -165,7 +165,7 @@ public class ViewLookGerado extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnGerar;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btnVoltarMenu;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;

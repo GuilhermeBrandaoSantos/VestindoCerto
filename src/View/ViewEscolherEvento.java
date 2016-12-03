@@ -30,7 +30,7 @@ public class ViewEscolherEvento extends javax.swing.JFrame {
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jRadioButton3 = new javax.swing.JRadioButton();
-        jButton1 = new javax.swing.JButton();
+        btnGerarLook = new javax.swing.JButton();
         lblEvento = new javax.swing.JLabel();
         jRadioButton4 = new javax.swing.JRadioButton();
         jRadioButton5 = new javax.swing.JRadioButton();
@@ -53,11 +53,11 @@ public class ViewEscolherEvento extends javax.swing.JFrame {
         jRadioButton3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jRadioButton3.setText("Festa Infantíl");
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButton1.setText("Gerar Look");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnGerarLook.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btnGerarLook.setText("Gerar Look");
+        btnGerarLook.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnGerarLookActionPerformed(evt);
             }
         });
 
@@ -82,7 +82,7 @@ public class ViewEscolherEvento extends javax.swing.JFrame {
                 .addContainerGap(78, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(btnGerarLook)
                         .addGap(69, 69, 69))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -115,7 +115,7 @@ public class ViewEscolherEvento extends javax.swing.JFrame {
                     .addComponent(jRadioButton5)
                     .addComponent(jRadioButton2))
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(btnGerarLook)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -126,13 +126,13 @@ public class ViewEscolherEvento extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnGerarLookActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGerarLookActionPerformed
 
         ViewLookGerado look = new ViewLookGerado();
         look.setVisible(true);
         dispose();
 
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnGerarLookActionPerformed
 
     /**
      * @param args the command line arguments
@@ -170,7 +170,7 @@ public class ViewEscolherEvento extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnGerarLook;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;

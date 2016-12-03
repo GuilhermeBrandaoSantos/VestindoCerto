@@ -29,9 +29,9 @@ public class ViewEscolherLocal extends javax.swing.JFrame {
 
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
-        jButton1 = new javax.swing.JButton();
+        bntEscolherEvento = new javax.swing.JButton();
         jRadioButton3 = new javax.swing.JRadioButton();
-        jButton2 = new javax.swing.JButton();
+        btnVoltarMenu = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -48,22 +48,22 @@ public class ViewEscolherLocal extends javax.swing.JFrame {
         jRadioButton2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jRadioButton2.setText("Cidade Interior");
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButton1.setText("Próxima Etapa");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        bntEscolherEvento.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        bntEscolherEvento.setText("Próxima Etapa");
+        bntEscolherEvento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                bntEscolherEventoActionPerformed(evt);
             }
         });
 
         jRadioButton3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jRadioButton3.setText("Chácara / Sítio");
 
-        jButton2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButton2.setText("Voltar ao menu principal");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnVoltarMenu.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btnVoltarMenu.setText("Voltar ao menu principal");
+        btnVoltarMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnVoltarMenuActionPerformed(evt);
             }
         });
 
@@ -86,10 +86,10 @@ public class ViewEscolherLocal extends javax.swing.JFrame {
                             .addComponent(jRadioButton2)
                             .addComponent(jRadioButton1)
                             .addComponent(jRadioButton3)
-                            .addComponent(jButton1))
+                            .addComponent(bntEscolherEvento))
                         .addGap(130, 130, 130))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnVoltarMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(83, 83, 83))))
         );
         layout.setVerticalGroup(
@@ -104,9 +104,9 @@ public class ViewEscolherLocal extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jRadioButton3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(bntEscolherEvento)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2)
+                .addComponent(btnVoltarMenu)
                 .addContainerGap())
         );
 
@@ -117,20 +117,20 @@ public class ViewEscolherLocal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton1ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void bntEscolherEventoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntEscolherEventoActionPerformed
 
         ViewEscolherEvento evento = new ViewEscolherEvento();
         evento.setVisible(true);
         dispose();
 
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_bntEscolherEventoActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnVoltarMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarMenuActionPerformed
 
         ViewMenu menu = new ViewMenu();;
         menu.setVisible(true);
         dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnVoltarMenuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -168,8 +168,8 @@ public class ViewEscolherLocal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton bntEscolherEvento;
+    private javax.swing.JButton btnVoltarMenu;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
