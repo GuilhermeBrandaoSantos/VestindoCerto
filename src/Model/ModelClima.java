@@ -12,11 +12,8 @@ package Model;
 public class ModelClima {
     
     private String nome;
-
-    public ModelClima(String nome) {
-        this.nome = nome;
-    }
-
+    private int id;
+    
     public String getNome() {
         return nome;
     }
@@ -24,5 +21,11 @@ public class ModelClima {
     public void setNome(String nome) {
         this.nome = nome;
     }
-    
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 }
