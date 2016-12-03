@@ -107,6 +107,7 @@ public class ViewLookGerado extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnGerarStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_btnGerarStateChanged

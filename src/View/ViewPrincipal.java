@@ -5,6 +5,8 @@
  */
 package View;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author internet
@@ -104,12 +106,14 @@ public class ViewPrincipal extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
 
         ViewMenu entrar = new ViewMenu();
         entrar.setVisible(true);
+        JOptionPane.showMessageDialog(null, "BEM VINDO !!!");
         dispose();
     }//GEN-LAST:event_btnEntrarActionPerformed
 

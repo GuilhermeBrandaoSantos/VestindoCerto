@@ -11,4 +11,18 @@ package Model;
  */
 public class ModelClima {
     
+    private String nome;
+
+    public ModelClima(String nome) {
+        this.nome = nome;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    
 }
