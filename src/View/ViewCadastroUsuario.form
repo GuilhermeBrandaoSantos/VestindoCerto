@@ -83,9 +83,9 @@
                           <EmptySpace max="32767" attributes="0"/>
                           <Component id="btnLimpar" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="jpfConfirmaSenha" min="-2" pref="228" max="-2" attributes="0"/>
+                      <Component id="txtSenhaConfirmar" min="-2" pref="228" max="-2" attributes="0"/>
                       <Component id="txtNome" alignment="1" max="32767" attributes="0"/>
-                      <Component id="jpfSenha" alignment="1" max="32767" attributes="0"/>
+                      <Component id="txtSenha" alignment="1" max="32767" attributes="0"/>
                       <Component id="txtEmail" alignment="1" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
@@ -108,12 +108,12 @@
                   <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="lblSenha" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jpfSenha" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtSenha" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="lblConfirmaSenha" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jpfConfirmaSenha" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtSenhaConfirmar" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -162,9 +162,9 @@
         </Component>
         <Component class="javax.swing.JTextField" name="txtEmail">
         </Component>
-        <Component class="javax.swing.JPasswordField" name="jpfSenha">
+        <Component class="javax.swing.JPasswordField" name="txtSenha">
         </Component>
-        <Component class="javax.swing.JPasswordField" name="jpfConfirmaSenha">
+        <Component class="javax.swing.JPasswordField" name="txtSenhaConfirmar">
         </Component>
         <Component class="javax.swing.JButton" name="bntCadastrar">
           <Properties>

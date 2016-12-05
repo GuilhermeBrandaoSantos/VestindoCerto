@@ -32,7 +32,7 @@
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="txtLogin" alignment="0" pref="257" max="32767" attributes="0"/>
+                  <Component id="txtEmail" alignment="0" pref="257" max="32767" attributes="0"/>
                   <Component id="txtSenha" alignment="0" pref="257" max="32767" attributes="0"/>
                   <Component id="lblLogin" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="lblSenha" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -56,7 +56,7 @@
               <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
               <Component id="lblLogin" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="txtLogin" min="-2" max="-2" attributes="0"/>
+              <Component id="txtEmail" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="lblSenha" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
@@ -95,7 +95,10 @@
         <Property name="alignmentY" type="float" value="0.0"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtLogin">
+    <Component class="javax.swing.JTextField" name="txtEmail">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtEmailActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblSenha">
       <Properties>

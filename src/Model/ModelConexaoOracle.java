@@ -16,7 +16,7 @@ import oracle.jdbc.OracleConnection;
 public class ModelConexaoOracle {
 
     public static void main(String[] args) {
-        String sql;
+        String sql; 
 
         String server = "localhost";
         String port = "1521";               // Porta TCP padrão do Oracle

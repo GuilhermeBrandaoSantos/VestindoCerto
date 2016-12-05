@@ -5,6 +5,10 @@
  */
 package View;
 
+import Controller.ControllerUsuario;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -37,8 +41,8 @@ public class ViewCadastroUsuario extends javax.swing.JFrame {
         lblConfirmaSenha = new javax.swing.JLabel();
         txtNome = new javax.swing.JTextField();
         txtEmail = new javax.swing.JTextField();
-        jpfSenha = new javax.swing.JPasswordField();
-        jpfConfirmaSenha = new javax.swing.JPasswordField();
+        txtSenha = new javax.swing.JPasswordField();
+        txtSenhaConfirmar = new javax.swing.JPasswordField();
         bntCadastrar = new javax.swing.JButton();
         btnLimpar = new javax.swing.JButton();
 
@@ -94,9 +98,9 @@ public class ViewCadastroUsuario extends javax.swing.JFrame {
                         .addComponent(bntCadastrar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnLimpar))
-                    .addComponent(jpfConfirmaSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtSenhaConfirmar, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtNome, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jpfSenha, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtSenha, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(txtEmail, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -114,11 +118,11 @@ public class ViewCadastroUsuario extends javax.swing.JFrame {
                 .addGap(15, 15, 15)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jpfSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblConfirmaSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jpfConfirmaSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtSenhaConfirmar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bntCadastrar)
@@ -156,14 +160,26 @@ public class ViewCadastroUsuario extends javax.swing.JFrame {
     private void btnLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimparActionPerformed
         txtNome.setText("");
         txtEmail.setText("");
-        jpfSenha.setText("");
-        jpfConfirmaSenha.setText("");
+        txtSenha.setText("");
+        txtSenhaConfirmar.setText("");
     }//GEN-LAST:event_btnLimparActionPerformed
 
     private void bntCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntCadastrarActionPerformed
-       
-        ViewPrincipal login = new ViewPrincipal();
+        String dados[] = new String[4];
         
+        dados[0] = txtNome.getText();
+        dados[1] = txtEmail.getText();
+        dados[2] = txtSenha.getText();
+        dados[3] = txtSenhaConfirmar.getText();
+        
+        ControllerUsuario usuario = new ControllerUsuario();
+        try {
+            usuario.storeUsuario(dados);
+        } catch (SQLException ex) {
+            Logger.getLogger(ViewCadastroUsuario.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        ViewPrincipal login = new ViewPrincipal();
 //        if ((txtNome.getText().isEmpty()) || (txtEmail.getText().isEmpty()) || (jpfSenha.getText().isEmpty()) || (jpfConfirmaSenha.getText().isEmpty())){
 //           JOptionPane.showMessageDialog(null, "Os campos com "+ "*" + " são obrigatórios.\n " +
 //                                               "Por favor preenchê-los.", "ERROR_MESSAGE", JOptionPane.ERROR_MESSAGE);            
@@ -212,13 +228,13 @@ public class ViewCadastroUsuario extends javax.swing.JFrame {
     private javax.swing.JButton btnLimpar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jpfConfirmaSenha;
-    private javax.swing.JPasswordField jpfSenha;
     private javax.swing.JLabel lblConfirmaSenha;
     private javax.swing.JLabel lblEmail;
     private javax.swing.JLabel lblNome;
     private javax.swing.JLabel lblSenha;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtNome;
+    private javax.swing.JPasswordField txtSenha;
+    private javax.swing.JPasswordField txtSenhaConfirmar;
     // End of variables declaration//GEN-END:variables
 }

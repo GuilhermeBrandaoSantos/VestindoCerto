@@ -6,6 +6,7 @@
 package View;
 
 import javax.swing.JOptionPane;
+import Controller.ControllerUsuario;
 
 /**
  *
@@ -33,7 +34,7 @@ public class ViewPrincipal extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         btnEntrar = new javax.swing.JButton();
         lblLogin = new javax.swing.JLabel();
-        txtLogin = new javax.swing.JTextField();
+        txtEmail = new javax.swing.JTextField();
         lblSenha = new javax.swing.JLabel();
         txtSenha = new javax.swing.JPasswordField();
         btnCadastrar = new javax.swing.JButton();
@@ -51,6 +52,12 @@ public class ViewPrincipal extends javax.swing.JFrame {
         lblLogin.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblLogin.setText("Email");
         lblLogin.setAlignmentY(0.0F);
+
+        txtEmail.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtEmailActionPerformed(evt);
+            }
+        });
 
         lblSenha.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblSenha.setText("Senha");
@@ -75,7 +82,7 @@ public class ViewPrincipal extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(88, 88, 88)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txtLogin, javax.swing.GroupLayout.DEFAULT_SIZE, 257, Short.MAX_VALUE)
+                    .addComponent(txtEmail, javax.swing.GroupLayout.DEFAULT_SIZE, 257, Short.MAX_VALUE)
                     .addComponent(txtSenha, javax.swing.GroupLayout.DEFAULT_SIZE, 257, Short.MAX_VALUE)
                     .addComponent(lblLogin)
                     .addComponent(lblSenha)
@@ -94,7 +101,7 @@ public class ViewPrincipal extends javax.swing.JFrame {
                 .addGap(67, 67, 67)
                 .addComponent(lblLogin)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblSenha)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -111,19 +118,32 @@ public class ViewPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
+        if (!(txtEmail.getText().isEmpty()) || !(txtSenha.getText().isEmpty())){
+            ControllerUsuario usuario = new ControllerUsuario();
+            boolean controle = usuario.Login(txtEmail.getText(), txtSenha.getText());
+            if(controle){
+                ViewMenu viewMenu = new ViewMenu();
+                viewMenu.setVisible(true);
+                JOptionPane.showMessageDialog(null, "Bem vindo.");
+                dispose();
+            }else{
+                JOptionPane.showMessageDialog(null, "Dados incorretos, tente novamente.");
+            }
+        }else{
+            JOptionPane.showMessageDialog(null, "Você deve preencher email e senha.");
+        }
 
-        ViewMenu entrar = new ViewMenu();
-        entrar.setVisible(true);
-        JOptionPane.showMessageDialog(null, "BEM VINDO !!!");
-        dispose();
     }//GEN-LAST:event_btnEntrarActionPerformed
 
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
-        
-        ViewCadastroUsuario cadastrar = new ViewCadastroUsuario();
-        cadastrar.setVisible(true);
+        ViewCadastroUsuario viewCadastroUsuario = new ViewCadastroUsuario();
+        viewCadastroUsuario.setVisible(true);
         dispose();
     }//GEN-LAST:event_btnCadastrarActionPerformed
+
+    private void txtEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtEmailActionPerformed
 
     /**
      * @param args the command line arguments
@@ -167,7 +187,7 @@ public class ViewPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblLogin;
     private javax.swing.JLabel lblSenha;
-    private javax.swing.JTextField txtLogin;
+    private javax.swing.JTextField txtEmail;
     private javax.swing.JPasswordField txtSenha;
     // End of variables declaration//GEN-END:variables
 }
