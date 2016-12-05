@@ -36,6 +36,11 @@ public class ViewMenu extends javax.swing.JFrame {
 
         btnCadastrarRoupa.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnCadastrarRoupa.setText("Cadastar Roupas");
+        btnCadastrarRoupa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCadastrarRoupaActionPerformed(evt);
+            }
+        });
 
         btnPerfil.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnPerfil.setText("Perfil");
@@ -99,6 +104,13 @@ public class ViewMenu extends javax.swing.JFrame {
         clima.setVisible(true);
         dispose();
     }//GEN-LAST:event_btnEscolherLookActionPerformed
+
+    private void btnCadastrarRoupaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarRoupaActionPerformed
+        // TODO add your handling code here:
+        ViewCadastroRoupa viewCadastroRoupa = new ViewCadastroRoupa();
+        viewCadastroRoupa.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnCadastrarRoupaActionPerformed
 
     /**
      * @param args the command line arguments
