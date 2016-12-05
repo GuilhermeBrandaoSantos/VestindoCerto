@@ -28,7 +28,7 @@ public class ViewMenu extends javax.swing.JFrame {
     private void initComponents() {
 
         btnCadastrarRoupa = new javax.swing.JButton();
-        btnCadastrarLocal = new javax.swing.JButton();
+        btnPerfil = new javax.swing.JButton();
         btnSair = new javax.swing.JButton();
         btnEscolherLook = new javax.swing.JButton();
 
@@ -37,8 +37,8 @@ public class ViewMenu extends javax.swing.JFrame {
         btnCadastrarRoupa.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnCadastrarRoupa.setText("Cadastar Roupas");
 
-        btnCadastrarLocal.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        btnCadastrarLocal.setText("Cadastrar Local");
+        btnPerfil.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btnPerfil.setText("Perfil");
 
         btnSair.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnSair.setText("Sair");
@@ -67,7 +67,7 @@ public class ViewMenu extends javax.swing.JFrame {
                     .addComponent(btnCadastrarRoupa, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnCadastrarLocal, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE)
+                    .addComponent(btnPerfil, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE)
                     .addComponent(btnSair, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(34, 34, 34))
         );
@@ -76,7 +76,7 @@ public class ViewMenu extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCadastrarLocal, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnCadastrarRoupa, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -136,9 +136,9 @@ public class ViewMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCadastrarLocal;
     private javax.swing.JButton btnCadastrarRoupa;
     private javax.swing.JButton btnEscolherLook;
+    private javax.swing.JButton btnPerfil;
     private javax.swing.JButton btnSair;
     // End of variables declaration//GEN-END:variables
 }
