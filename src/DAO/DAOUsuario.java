@@ -54,7 +54,7 @@ public class DAOUsuario {
         }
     }  
    
-    public void storeUsuario(ModelUsuario modelUsuario) throws SQLException {
+    public boolean storeUsuario(ModelUsuario modelUsuario) throws SQLException {
         String sql = "";
         sql += "insert into usuario (`nome`, `email`, `senha`)";
         sql += " VALUES ";
@@ -75,8 +75,10 @@ public class DAOUsuario {
             stmt.executeBatch();
             stmt.close();
             conexao.getConexao().close();
+            return true;
         }catch(SQLException sqlEx){
             System.out.println(sqlEx.getMessage());
+            return false;
         }
     }
 }

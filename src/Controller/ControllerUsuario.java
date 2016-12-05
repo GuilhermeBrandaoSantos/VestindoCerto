@@ -26,7 +26,7 @@ public class ControllerUsuario {
         return listUsuarios;
     }
     
-    public void storeUsuario(String dados[]) throws SQLException{
+    public boolean storeUsuario(String dados[]) throws SQLException{
         ModelUsuario modelUsuario = new ModelUsuario();
         DAOUsuario DAOUsuario = new DAOUsuario();
         
@@ -34,7 +34,8 @@ public class ControllerUsuario {
         modelUsuario.setEmail(dados[1]);
         modelUsuario.setSenha(dados[2]);
         //System.out.println(modelUsuario.getNome());
-        DAOUsuario.storeUsuario(modelUsuario);
+        
+        return DAOUsuario.storeUsuario(modelUsuario);
     }
     
     public boolean Login(String email, String senha){

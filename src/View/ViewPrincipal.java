@@ -118,7 +118,9 @@ public class ViewPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
-        if (!(txtEmail.getText().isEmpty()) || !(txtSenha.getText().isEmpty())){
+        String email = txtEmail.getText();
+        String senha = txtSenha.getText();
+        if (!("".equals(email) || "".equals(senha))){
             ControllerUsuario usuario = new ControllerUsuario();
             boolean controle = usuario.Login(txtEmail.getText(), txtSenha.getText());
             if(controle){
@@ -127,10 +129,10 @@ public class ViewPrincipal extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Bem vindo.");
                 dispose();
             }else{
-                JOptionPane.showMessageDialog(null, "Dados incorretos, tente novamente.");
+                JOptionPane.showMessageDialog(null, "Dados incorretos, tente novamente.", "ERROR_MESSAGE", JOptionPane.ERROR_MESSAGE);
             }
         }else{
-            JOptionPane.showMessageDialog(null, "Você deve preencher email e senha.");
+            JOptionPane.showMessageDialog(null, "Você deve preencher email e senha.", "ERROR_MESSAGE", JOptionPane.ERROR_MESSAGE);
         }
 
     }//GEN-LAST:event_btnEntrarActionPerformed

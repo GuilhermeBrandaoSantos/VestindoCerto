@@ -166,26 +166,35 @@ public class ViewCadastroUsuario extends javax.swing.JFrame {
 
     private void bntCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntCadastrarActionPerformed
         String dados[] = new String[4];
+        boolean controle;
         
         dados[0] = txtNome.getText();
         dados[1] = txtEmail.getText();
         dados[2] = txtSenha.getText();
         dados[3] = txtSenhaConfirmar.getText();
         
-        ControllerUsuario usuario = new ControllerUsuario();
         try {
-            usuario.storeUsuario(dados);
+            if ("".equals(dados[0]) || "".equals(dados[1]) || "".equals(dados[2]) || "".equals(dados[3])){
+                JOptionPane.showMessageDialog(null, "Você deve preencher todos os campos", "ERROR_MESSAGE", JOptionPane.ERROR_MESSAGE);            
+            }else{   
+                if(dados[3].equals(dados[2])){
+                    ControllerUsuario usuario = new ControllerUsuario();
+                    controle = usuario.storeUsuario(dados);
+                    if(controle){
+                        ViewMenu viewMenu = new ViewMenu();
+                        JOptionPane.showMessageDialog(null, "Cadastro realizado com sucesso.");
+                        viewMenu.setVisible(true);
+                        dispose();   
+                    }
+                }else{
+                    JOptionPane.showMessageDialog(null, "A confirmação de senha está incorreta", "ERROR_MESSAGE", JOptionPane.ERROR_MESSAGE); 
+                }
+            }
         } catch (SQLException ex) {
             Logger.getLogger(ViewCadastroUsuario.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        ViewPrincipal login = new ViewPrincipal();
-//        if ((txtNome.getText().isEmpty()) || (txtEmail.getText().isEmpty()) || (jpfSenha.getText().isEmpty()) || (jpfConfirmaSenha.getText().isEmpty())){
-//           JOptionPane.showMessageDialog(null, "Os campos com "+ "*" + " são obrigatórios.\n " +
-//                                               "Por favor preenchê-los.", "ERROR_MESSAGE", JOptionPane.ERROR_MESSAGE);            
-//       }else    JOptionPane.showMessageDialog(null, "Por gentileza verifique seu e-mail para continuarmos.");
-                login.setVisible(true);
-                dispose();       
+
+                
     }//GEN-LAST:event_bntCadastrarActionPerformed
 
     /**
