@@ -5,10 +5,13 @@
  */
 package View;
 
+import Model.ModelRoupa;
 import UTIL.ManipularImagem;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.sql.Timestamp;
+import java.time.Instant;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
@@ -114,16 +117,31 @@ public class ViewCadastroRoupa extends javax.swing.JFrame {
     }//GEN-LAST:event_txtImageActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        //Objetos
+        ModelRoupa modelRoupa = new ModelRoupa();
+        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+        
+        //Definições para timestamp
+        Instant instant = timestamp.toInstant();
+        Timestamp tsFromInstant = Timestamp.from(instant);
+        
+        //Setando objeto
+        String imageName = String.valueOf(tsFromInstant.getTime());
+        modelRoupa.setImagem(imageName+".jpg");
+        
+        //Upload do arquivo
         try {
-            //System.out.println("");
-            String caminho = new File(".").getCanonicalPath()+"/src/Imagens/";
-            File outputfile = new File(caminho+"image.jpg");
+            String caminho = new File(".").getCanonicalPath()+"/src/ImagesUsuarios/";
+            File outputfile = new File(caminho+modelRoupa.getImagem()+".jpg");
             ImageIO.write(imagem, "jpg", outputfile);
             JOptionPane.showMessageDialog(rootPane, "Imagem enviada com sucesso");
         } catch (IOException ex) {
             Logger.getLogger(ViewCadastroRoupa.class.getName()).log(Level.SEVERE, null, ex);
         }
-             
+        
+        ViewCadastroRoupaLocal next = new ViewCadastroRoupaLocal(modelRoupa);
+        next.setVisible(true);
+        dispose();     
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
