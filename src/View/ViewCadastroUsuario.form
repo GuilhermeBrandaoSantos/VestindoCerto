@@ -118,7 +118,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;Confirma Senha &lt;/b&gt;&lt;font color=&quot;red&quot;&gt;*&lt;/font&gt;"/>
+            <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;b&gt;Confirmar Senha &lt;/b&gt;&lt;font color=&quot;red&quot;&gt;*&lt;/font&gt;"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">

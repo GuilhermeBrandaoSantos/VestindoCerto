@@ -77,7 +77,7 @@ public class ViewCadastroUsuario extends javax.swing.JFrame {
 
         lblConfirmaSenha.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         lblConfirmaSenha.setForeground(new java.awt.Color(255, 255, 255));
-        lblConfirmaSenha.setText("<html><b>Confirma Senha </b><font color=\"red\">*</font>");
+        lblConfirmaSenha.setText("<html><b>Confirmar Senha </b><font color=\"red\">*</font>");
         jPanel1.add(lblConfirmaSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, -1, -1));
         jPanel1.add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(142, 35, 270, -1));
         jPanel1.add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 70, 270, -1));

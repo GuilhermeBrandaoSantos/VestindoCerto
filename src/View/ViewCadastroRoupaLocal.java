@@ -74,14 +74,14 @@ public class ViewCadastroRoupaLocal extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(157, 157, 157)
                         .addComponent(jButtonNext)))
-                .addContainerGap(161, Short.MAX_VALUE))
+                .addContainerGap(215, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(66, 66, 66)
                 .addComponent(lblTesteNome)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 150, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 250, Short.MAX_VALUE)
                 .addComponent(jButtonNext)
                 .addGap(52, 52, 52))
         );

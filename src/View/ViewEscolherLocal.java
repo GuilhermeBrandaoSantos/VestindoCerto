@@ -62,7 +62,7 @@ public class ViewEscolherLocal extends javax.swing.JFrame {
                 bntEscolherEventoActionPerformed(evt);
             }
         });
-        getContentPane().add(bntEscolherEvento, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 309, -1, 40));
+        getContentPane().add(bntEscolherEvento, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 340, 180, 50));
 
         jRadioButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jRadioButton3.setForeground(new java.awt.Color(255, 255, 255));
@@ -70,13 +70,14 @@ public class ViewEscolherLocal extends javax.swing.JFrame {
         getContentPane().add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 230, -1, 30));
 
         btnVoltarMenu.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        btnVoltarMenu.setText("Voltar ao menu principal");
+        btnVoltarMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icone-voltar.png"))); // NOI18N
+        btnVoltarMenu.setText("Voltar");
         btnVoltarMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVoltarMenuActionPerformed(evt);
             }
         });
-        getContentPane().add(btnVoltarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 360, -1, 34));
+        getContentPane().add(btnVoltarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 140, 50));
 
         jLabel1.setFont(new java.awt.Font("SansSerif", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));

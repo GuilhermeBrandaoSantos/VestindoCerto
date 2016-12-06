@@ -27,8 +27,8 @@ public class ViewLookGerado extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
         btnVoltarMenu = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
         btnGerar = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -37,16 +37,17 @@ public class ViewLookGerado extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
         btnVoltarMenu.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        btnVoltarMenu.setText("Voltar ao menu principal");
+        btnVoltarMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icone-voltar.png"))); // NOI18N
+        btnVoltarMenu.setText("Voltar");
         btnVoltarMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVoltarMenuActionPerformed(evt);
             }
         });
-        jPanel1.add(btnVoltarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 238, -1));
+        getContentPane().add(btnVoltarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 340, 200, 50));
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnGerar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnGerar.setText("Gerar Novo");
@@ -60,7 +61,7 @@ public class ViewLookGerado extends javax.swing.JFrame {
                 btnGerarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnGerar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 238, -1));
+        jPanel1.add(btnGerar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, 140, 50));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/backgound4.png"))); // NOI18N
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -300, 450, 400));
@@ -80,17 +81,16 @@ public class ViewLookGerado extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnGerarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGerarActionPerformed
+
+        //        VestindoCerto_Climate clima = new VestindoCerto_Climate();
+        //        clima.setVisible(true);
+        //        dispose();
+    }//GEN-LAST:event_btnGerarActionPerformed
+
     private void btnGerarStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_btnGerarStateChanged
         // TODO add your handling code here:
     }//GEN-LAST:event_btnGerarStateChanged
-
-    private void btnGerarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGerarActionPerformed
-
-//        VestindoCerto_Climate clima = new VestindoCerto_Climate();
-//        clima.setVisible(true);
-//        dispose();
-
-    }//GEN-LAST:event_btnGerarActionPerformed
 
     private void btnVoltarMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarMenuActionPerformed
 

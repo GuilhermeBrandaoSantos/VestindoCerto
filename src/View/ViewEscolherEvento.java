@@ -36,6 +36,7 @@ public class ViewEscolherEvento extends javax.swing.JFrame {
         jRadioButton4 = new javax.swing.JRadioButton();
         jRadioButton5 = new javax.swing.JRadioButton();
         jRadioButton6 = new javax.swing.JRadioButton();
+        btnVoltarMenu = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -69,7 +70,7 @@ public class ViewEscolherEvento extends javax.swing.JFrame {
                 btnGerarLookActionPerformed(evt);
             }
         });
-        getContentPane().add(btnGerarLook, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 320, 172, 40));
+        getContentPane().add(btnGerarLook, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 340, 172, 50));
 
         lblEvento.setFont(new java.awt.Font("SansSerif", 1, 36)); // NOI18N
         lblEvento.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -88,8 +89,18 @@ public class ViewEscolherEvento extends javax.swing.JFrame {
 
         buttonGroup1.add(jRadioButton6);
         jRadioButton6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jRadioButton6.setText("Paseio");
+        jRadioButton6.setText("Passeio");
         getContentPane().add(jRadioButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 170, -1, -1));
+
+        btnVoltarMenu.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btnVoltarMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icone-voltar.png"))); // NOI18N
+        btnVoltarMenu.setText("Voltar");
+        btnVoltarMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarMenuActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnVoltarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 140, 50));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/backgound7.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 400));
@@ -109,6 +120,13 @@ public class ViewEscolherEvento extends javax.swing.JFrame {
         dispose();
 
     }//GEN-LAST:event_btnGerarLookActionPerformed
+
+    private void btnVoltarMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarMenuActionPerformed
+
+        ViewMenu menu = new ViewMenu();;
+        menu.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnVoltarMenuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -147,6 +165,7 @@ public class ViewEscolherEvento extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnGerarLook;
+    private javax.swing.JButton btnVoltarMenu;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JRadioButton jRadioButton1;
