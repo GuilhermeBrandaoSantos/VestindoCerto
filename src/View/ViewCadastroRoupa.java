@@ -5,8 +5,17 @@
  */
 package View;
 
+import UTIL.ManipularImagem;
+import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 /**
  *
@@ -17,6 +26,7 @@ public class ViewCadastroRoupa extends javax.swing.JFrame {
     /**
      * Creates new form ViewCadastroRoupa
      */
+    BufferedImage imagem;
     public ViewCadastroRoupa() {
         initComponents();
     }
@@ -35,18 +45,26 @@ public class ViewCadastroRoupa extends javax.swing.JFrame {
         txtImage = new javax.swing.JTextField();
         lblImage = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         jRadioButtonMenuItem1.setSelected(true);
         jRadioButtonMenuItem1.setText("jRadioButtonMenuItem1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(450, 400));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setText("Cadastro de Roupa");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(114, 6, -1, -1));
-        getContentPane().add(txtImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 240, 30));
-        getContentPane().add(lblImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, 200, 180));
+
+        txtImage.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtImageActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 240, 30));
+        getContentPane().add(lblImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 240, 240));
 
         jButton1.setText("inserir");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -54,25 +72,59 @@ public class ViewCadastroRoupa extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 270, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 90, -1, -1));
+
+        jButton2.setText("Subir imagem");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 200, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        JFileChooser chooser = new JFileChooser(); //Objeto de manipulação dos arquivos
+        int res = chooser.showOpenDialog(null); //resposta
         
-        JFileChooser chooser = new JFileChooser();        
-        chooser.showOpenDialog(null);
-        File f = chooser.getSelectedFile();
-        String filename = f.getAbsolutePath();
-        txtImage.setText(filename);
+        String caminhoFisico;      
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("JPG PNG GIF Images", "jpg", "gif", "png");
+        chooser.setFileFilter(filter);
         
-        
-        
-        
-        
+        if(res == JFileChooser.APPROVE_OPTION){
+            File arquivo = chooser.getSelectedFile();
+            try {
+                caminhoFisico = chooser.getCurrentDirectory()+"/"+chooser.getSelectedFile().getName();
+                txtImage.setText(caminhoFisico);
+                
+                imagem = ManipularImagem.setImagemDimensao(arquivo.getAbsolutePath(), 240, 240);
+                lblImage.setIcon(new ImageIcon(imagem));
+                
+            } catch (Exception ex) {
+               // System.out.println(ex.printStackTrace().toString());
+            }
+            //System.out.println("diretorio: "+chooser.getCurrentDirectory());
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void txtImageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtImageActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtImageActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        try {
+            //System.out.println("");
+            String caminho = new File(".").getCanonicalPath()+"/src/Imagens/";
+            File outputfile = new File(caminho+"image.jpg");
+            ImageIO.write(imagem, "jpg", outputfile);
+            JOptionPane.showMessageDialog(rootPane, "Imagem enviada com sucesso");
+        } catch (IOException ex) {
+            Logger.getLogger(ViewCadastroRoupa.class.getName()).log(Level.SEVERE, null, ex);
+        }
+             
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -111,6 +163,7 @@ public class ViewCadastroRoupa extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
     private javax.swing.JLabel lblImage;
