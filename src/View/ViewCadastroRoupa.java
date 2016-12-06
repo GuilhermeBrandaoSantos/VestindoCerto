@@ -132,7 +132,7 @@ public class ViewCadastroRoupa extends javax.swing.JFrame {
         //Upload do arquivo
         try {
             String caminho = new File(".").getCanonicalPath()+"/src/ImagesUsuarios/";
-            File outputfile = new File(caminho+modelRoupa.getImagem()+".jpg");
+            File outputfile = new File(caminho+modelRoupa.getImagem());
             ImageIO.write(imagem, "jpg", outputfile);
             JOptionPane.showMessageDialog(rootPane, "Imagem enviada com sucesso");
         } catch (IOException ex) {
