@@ -41,27 +41,31 @@ public class ViewEscolherClima extends javax.swing.JFrame {
         rbtnEnsolarado.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         rbtnEnsolarado.setText("Ensolarado");
         rbtnEnsolarado.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        getContentPane().add(rbtnEnsolarado, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 180, 120, 76));
+        getContentPane().add(rbtnEnsolarado, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 160, 120, 76));
 
         rbtnFrio.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         rbtnFrio.setText("Frio");
         rbtnFrio.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        getContentPane().add(rbtnFrio, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 260, 70, 78));
+        getContentPane().add(rbtnFrio, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 240, 70, 78));
 
         btnProx1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnProx1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icone-proximo.png"))); // NOI18N
-        btnProx1.setText("Próxima Etapa");
+        btnProx1.setText("Próximo");
         btnProx1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnProx1ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnProx1, new org.netbeans.lib.awtextra.AbsoluteConstraints(225, 340, 210, 50));
+        getContentPane().add(btnProx1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 330, 190, 50));
 
-        lblClima.setFont(new java.awt.Font("SansSerif", 1, 36)); // NOI18N
+        lblClima.setFont(new java.awt.Font("SansSerif", 1, 30)); // NOI18N
         lblClima.setForeground(new java.awt.Color(255, 255, 255));
+        lblClima.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblClima.setText("Escolha o Clima");
-        getContentPane().add(lblClima, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, -1, 86));
+        lblClima.setMaximumSize(new java.awt.Dimension(250, 40));
+        lblClima.setMinimumSize(new java.awt.Dimension(250, 40));
+        lblClima.setPreferredSize(new java.awt.Dimension(330, 40));
+        getContentPane().add(lblClima, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 450, 40));
 
         rbtnNublado.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         rbtnNublado.setSelected(true);
@@ -72,7 +76,7 @@ public class ViewEscolherClima extends javax.swing.JFrame {
                 rbtnNubladoActionPerformed(evt);
             }
         });
-        getContentPane().add(rbtnNublado, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 100, 100, 76));
+        getContentPane().add(rbtnNublado, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 80, 100, 76));
 
         btnVoltarMenu.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnVoltarMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icone-voltar.png"))); // NOI18N
@@ -82,7 +86,7 @@ public class ViewEscolherClima extends javax.swing.JFrame {
                 btnVoltarMenuActionPerformed(evt);
             }
         });
-        getContentPane().add(btnVoltarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 340, 200, 50));
+        getContentPane().add(btnVoltarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 190, 50));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/backgound.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 400));

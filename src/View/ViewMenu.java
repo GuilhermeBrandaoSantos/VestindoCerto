@@ -73,10 +73,12 @@ public class ViewMenu extends javax.swing.JFrame {
         });
         getContentPane().add(btnEscolherLook, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 190, 50));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("SansSerif", 1, 30)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Menu");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 30, -1, -1));
+        jLabel1.setPreferredSize(new java.awt.Dimension(330, 40));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 450, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/backgound2.png"))); // NOI18N
         jLabel3.setPreferredSize(new java.awt.Dimension(550, 450));
