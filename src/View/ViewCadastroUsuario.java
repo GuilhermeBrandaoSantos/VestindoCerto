@@ -51,34 +51,34 @@ public class ViewCadastroUsuario extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Cadastro de Usuário");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 40, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, -1, -1));
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Cadastrar novo usuário"));
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblNome.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblNome.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         lblNome.setForeground(new java.awt.Color(255, 255, 255));
         lblNome.setText("<html><b>Nome </b><font color=\"red\">*</font>");
-        jPanel1.add(lblNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 35, -1, -1));
+        jPanel1.add(lblNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, -1, -1));
 
-        lblEmail.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblEmail.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         lblEmail.setForeground(new java.awt.Color(255, 255, 255));
         lblEmail.setText("<html><b>E-mail </b><font color=\"red\">*</font>");
-        jPanel1.add(lblEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 66, -1, -1));
+        jPanel1.add(lblEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, -1, -1));
 
-        lblSenha.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblSenha.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         lblSenha.setForeground(new java.awt.Color(255, 255, 255));
         lblSenha.setText("<html><b>Senha     </b><font color=\"red\">*</font>");
-        jPanel1.add(lblSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 101, -1, -1));
+        jPanel1.add(lblSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, -1, -1));
 
-        lblConfirmaSenha.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblConfirmaSenha.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
         lblConfirmaSenha.setForeground(new java.awt.Color(255, 255, 255));
         lblConfirmaSenha.setText("<html><b>Confirma Senha </b><font color=\"red\">*</font>");
-        jPanel1.add(lblConfirmaSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 132, -1, -1));
+        jPanel1.add(lblConfirmaSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, -1, -1));
         jPanel1.add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(142, 35, 270, -1));
         jPanel1.add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 70, 270, -1));
 
@@ -111,12 +111,12 @@ public class ViewCadastroUsuario extends javax.swing.JFrame {
         jPanel1.add(btnLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 210, 120, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/banner-vestindo-certo-principal.jpg"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, -80, 440, 400));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, -80, 440, 400));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 410, 300));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/banner-vestindo-certo-principal.jpg"))); // NOI18N
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 460, 400));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 400));
 
         pack();
         setLocationRelativeTo(null);

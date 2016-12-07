@@ -38,18 +38,19 @@ public class ViewMenu extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnCadastrarRoupa.setFont(new java.awt.Font("Tahoma", 0, 17)); // NOI18N
-        btnCadastrarRoupa.setText("Cadastar Roupas");
+        btnCadastrarRoupa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icone-cadastrar.png"))); // NOI18N
+        btnCadastrarRoupa.setText("<html>Cadastrar<br>Roupas");
         btnCadastrarRoupa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCadastrarRoupaActionPerformed(evt);
             }
         });
-        getContentPane().add(btnCadastrarRoupa, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, -1, 80));
+        getContentPane().add(btnCadastrarRoupa, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 160, 120));
 
         btnPerfil.setFont(new java.awt.Font("Tahoma", 0, 17)); // NOI18N
         btnPerfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icone-perfil.png"))); // NOI18N
         btnPerfil.setText("Perfil");
-        getContentPane().add(btnPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 110, 165, 80));
+        getContentPane().add(btnPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 110, 165, 120));
 
         btnSair.setFont(new java.awt.Font("Tahoma", 0, 17)); // NOI18N
         btnSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icnoe-sair.jpg"))); // NOI18N
@@ -59,7 +60,7 @@ public class ViewMenu extends javax.swing.JFrame {
                 btnSairActionPerformed(evt);
             }
         });
-        getContentPane().add(btnSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 220, 165, 80));
+        getContentPane().add(btnSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 270, 165, 120));
 
         btnEscolherLook.setFont(new java.awt.Font("Tahoma", 0, 17)); // NOI18N
         btnEscolherLook.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icone-escolher.png"))); // NOI18N
@@ -69,12 +70,12 @@ public class ViewMenu extends javax.swing.JFrame {
                 btnEscolherLookActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEscolherLook, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 165, 80));
+        getContentPane().add(btnEscolherLook, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 165, 120));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 30)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Menu");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 30, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 30, -1, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/backgound2.png"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 450));

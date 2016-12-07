@@ -48,15 +48,16 @@ public class ViewEscolherClima extends javax.swing.JFrame {
         getContentPane().add(rbtnFrio, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 260, 60, 78));
 
         btnProx1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btnProx1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icone-proximo.png"))); // NOI18N
         btnProx1.setText("Próxima Etapa");
         btnProx1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnProx1ActionPerformed(evt);
             }
         });
-        getContentPane().add(btnProx1, new org.netbeans.lib.awtextra.AbsoluteConstraints(136, 342, 171, 47));
+        getContentPane().add(btnProx1, new org.netbeans.lib.awtextra.AbsoluteConstraints(127, 342, 180, 47));
 
-        lblClima.setFont(new java.awt.Font("SansSerif", 2, 36)); // NOI18N
+        lblClima.setFont(new java.awt.Font("SansSerif", 1, 36)); // NOI18N
         lblClima.setForeground(new java.awt.Color(255, 255, 255));
         lblClima.setText("Escolha o Clima");
         getContentPane().add(lblClima, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, -1, 86));
