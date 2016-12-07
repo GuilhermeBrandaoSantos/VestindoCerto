@@ -32,16 +32,20 @@ public class ViewEscolherClima extends javax.swing.JFrame {
         btnProx1 = new javax.swing.JButton();
         lblClima = new javax.swing.JLabel();
         rbtnNublado = new javax.swing.JRadioButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         rbtnEnsolarado.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         rbtnEnsolarado.setText("Ensolarado");
         rbtnEnsolarado.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        getContentPane().add(rbtnEnsolarado, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 180, 120, 76));
 
         rbtnFrio.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         rbtnFrio.setText("Frio");
         rbtnFrio.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        getContentPane().add(rbtnFrio, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 260, 60, 78));
 
         btnProx1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnProx1.setText("Próxima Etapa");
@@ -50,9 +54,12 @@ public class ViewEscolherClima extends javax.swing.JFrame {
                 btnProx1ActionPerformed(evt);
             }
         });
+        getContentPane().add(btnProx1, new org.netbeans.lib.awtextra.AbsoluteConstraints(136, 342, 171, 47));
 
-        lblClima.setFont(new java.awt.Font("Monotype Corsiva", 2, 36)); // NOI18N
+        lblClima.setFont(new java.awt.Font("SansSerif", 2, 36)); // NOI18N
+        lblClima.setForeground(new java.awt.Color(255, 255, 255));
         lblClima.setText("Escolha o Clima");
+        getContentPane().add(lblClima, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, -1, 86));
 
         rbtnNublado.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         rbtnNublado.setSelected(true);
@@ -63,43 +70,10 @@ public class ViewEscolherClima extends javax.swing.JFrame {
                 rbtnNubladoActionPerformed(evt);
             }
         });
+        getContentPane().add(rbtnNublado, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 100, 90, 76));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(152, 152, 152)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(rbtnEnsolarado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(rbtnNublado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(rbtnFrio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(159, 159, 159))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(110, 110, 110)
-                        .addComponent(lblClima))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(136, 136, 136)
-                        .addComponent(btnProx1)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lblClima, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(rbtnNublado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(rbtnEnsolarado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(rbtnFrio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
-                .addComponent(btnProx1)
-                .addContainerGap())
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/backgound.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 400));
 
         pack();
         setLocationRelativeTo(null);
@@ -154,6 +128,7 @@ public class ViewEscolherClima extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnProx1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblClima;
     private javax.swing.JRadioButton rbtnEnsolarado;
     private javax.swing.JRadioButton rbtnFrio;
