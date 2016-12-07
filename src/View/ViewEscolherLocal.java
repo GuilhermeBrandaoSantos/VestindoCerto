@@ -47,7 +47,7 @@ public class ViewEscolherLocal extends javax.swing.JFrame {
                 jRadioButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 90, -1, 30));
+        getContentPane().add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, -1, 30));
 
         jRadioButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
@@ -56,18 +56,18 @@ public class ViewEscolherLocal extends javax.swing.JFrame {
 
         bntEscolherEvento.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         bntEscolherEvento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icone-proximo.png"))); // NOI18N
-        bntEscolherEvento.setText("Próxima Etapa");
+        bntEscolherEvento.setText("Próximo");
         bntEscolherEvento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bntEscolherEventoActionPerformed(evt);
             }
         });
-        getContentPane().add(bntEscolherEvento, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 340, 180, 50));
+        getContentPane().add(bntEscolherEvento, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 330, 190, 50));
 
         jRadioButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jRadioButton3.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton3.setText("Chácara / Sítio");
-        getContentPane().add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 230, -1, 30));
+        getContentPane().add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, -1, 30));
 
         btnVoltarMenu.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnVoltarMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icone-voltar.png"))); // NOI18N
@@ -77,7 +77,7 @@ public class ViewEscolherLocal extends javax.swing.JFrame {
                 btnVoltarMenuActionPerformed(evt);
             }
         });
-        getContentPane().add(btnVoltarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 140, 50));
+        getContentPane().add(btnVoltarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 190, 50));
 
         jLabel1.setFont(new java.awt.Font("SansSerif", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));

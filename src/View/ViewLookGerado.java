@@ -45,7 +45,7 @@ public class ViewLookGerado extends javax.swing.JFrame {
                 btnVoltarMenuActionPerformed(evt);
             }
         });
-        getContentPane().add(btnVoltarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 340, 200, 50));
+        getContentPane().add(btnVoltarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 190, 50));
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -61,7 +61,7 @@ public class ViewLookGerado extends javax.swing.JFrame {
                 btnGerarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnGerar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, 140, 50));
+        jPanel1.add(btnGerar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, 190, 50));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/backgound4.png"))); // NOI18N
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -300, 450, 400));
@@ -72,6 +72,7 @@ public class ViewLookGerado extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Este é sua combinação");
+        jLabel1.setFocusTraversalPolicyProvider(true);
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(87, 21, 293, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/backgound4.png"))); // NOI18N

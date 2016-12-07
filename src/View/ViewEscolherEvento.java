@@ -70,7 +70,7 @@ public class ViewEscolherEvento extends javax.swing.JFrame {
                 btnGerarLookActionPerformed(evt);
             }
         });
-        getContentPane().add(btnGerarLook, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 340, 172, 50));
+        getContentPane().add(btnGerarLook, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 330, 190, 50));
 
         lblEvento.setFont(new java.awt.Font("SansSerif", 1, 36)); // NOI18N
         lblEvento.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -100,7 +100,7 @@ public class ViewEscolherEvento extends javax.swing.JFrame {
                 btnVoltarMenuActionPerformed(evt);
             }
         });
-        getContentPane().add(btnVoltarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 140, 50));
+        getContentPane().add(btnVoltarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 190, 50));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/backgound7.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 400));
