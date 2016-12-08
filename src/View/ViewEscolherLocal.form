@@ -138,12 +138,12 @@
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Imagens/backgound3.png"/>
+          <Image iconType="3" name="/Imagens/banner-vestindo-certo-10.jpg"/>
         </Property>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="0" y="0" width="460" height="400"/>
+          <AbsoluteConstraints x="0" y="0" width="450" height="400"/>
         </Constraint>
       </Constraints>
     </Component>

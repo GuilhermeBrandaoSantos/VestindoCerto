@@ -89,7 +89,7 @@ public class ViewPrincipal extends javax.swing.JFrame {
         });
         getContentPane().add(btnCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 330, 190, 50));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/banner-vestindo-certo-principal.jpg"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/banner-vestindo-certo-00.jpg"))); // NOI18N
         jLabel4.setPreferredSize(new java.awt.Dimension(550, 400));
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 400));
 

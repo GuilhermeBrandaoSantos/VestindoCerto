@@ -32,10 +32,9 @@ public class ViewMenu extends javax.swing.JFrame {
         btnSair = new javax.swing.JButton();
         btnEscolherLook = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(550, 450));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnCadastrarRoupa.setFont(new java.awt.Font("Tahoma", 0, 17)); // NOI18N
@@ -80,9 +79,8 @@ public class ViewMenu extends javax.swing.JFrame {
         jLabel1.setPreferredSize(new java.awt.Dimension(330, 40));
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 450, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/backgound2.png"))); // NOI18N
-        jLabel3.setPreferredSize(new java.awt.Dimension(550, 450));
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 400));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/banner-vestindo-certo-12.jpg"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 400));
 
         pack();
         setLocationRelativeTo(null);
@@ -94,8 +92,8 @@ public class ViewMenu extends javax.swing.JFrame {
 
     private void btnEscolherLookActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEscolherLookActionPerformed
 
-        ViewEscolherClima clima = new ViewEscolherClima();
-        clima.setVisible(true);
+        ViewEscolherLocal local = new ViewEscolherLocal();
+        local.setVisible(true);
         dispose();
     }//GEN-LAST:event_btnEscolherLookActionPerformed
 
@@ -147,6 +145,6 @@ public class ViewMenu extends javax.swing.JFrame {
     private javax.swing.JButton btnPerfil;
     private javax.swing.JButton btnSair;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

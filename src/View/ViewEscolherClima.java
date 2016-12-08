@@ -32,18 +32,20 @@ public class ViewEscolherClima extends javax.swing.JFrame {
         btnProx1 = new javax.swing.JButton();
         lblClima = new javax.swing.JLabel();
         rbtnNublado = new javax.swing.JRadioButton();
-        btnVoltarMenu = new javax.swing.JButton();
+        btnVoltar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         rbtnEnsolarado.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        rbtnEnsolarado.setForeground(new java.awt.Color(255, 255, 255));
         rbtnEnsolarado.setText("Ensolarado");
         rbtnEnsolarado.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(rbtnEnsolarado, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 160, 120, 76));
 
         rbtnFrio.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        rbtnFrio.setForeground(new java.awt.Color(255, 255, 255));
         rbtnFrio.setText("Frio");
         rbtnFrio.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(rbtnFrio, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 240, 70, 78));
@@ -68,6 +70,7 @@ public class ViewEscolherClima extends javax.swing.JFrame {
         getContentPane().add(lblClima, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 450, 40));
 
         rbtnNublado.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        rbtnNublado.setForeground(new java.awt.Color(255, 255, 255));
         rbtnNublado.setSelected(true);
         rbtnNublado.setText("Nublado");
         rbtnNublado.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -78,17 +81,17 @@ public class ViewEscolherClima extends javax.swing.JFrame {
         });
         getContentPane().add(rbtnNublado, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 80, 100, 76));
 
-        btnVoltarMenu.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        btnVoltarMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icone-voltar.png"))); // NOI18N
-        btnVoltarMenu.setText("Voltar");
-        btnVoltarMenu.addActionListener(new java.awt.event.ActionListener() {
+        btnVoltar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btnVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icone-voltar.png"))); // NOI18N
+        btnVoltar.setText("Voltar");
+        btnVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnVoltarMenuActionPerformed(evt);
+                btnVoltarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnVoltarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 190, 50));
+        getContentPane().add(btnVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 190, 50));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/backgound.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/banner-vestindo-certo-08.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 400));
 
         pack();
@@ -97,8 +100,8 @@ public class ViewEscolherClima extends javax.swing.JFrame {
 
     private void btnProx1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProx1ActionPerformed
 
-        ViewEscolherLocal local = new ViewEscolherLocal();
-        local.setVisible(true);
+        ViewLookGerado look = new ViewLookGerado();
+        look.setVisible(true);
         dispose();
 
     }//GEN-LAST:event_btnProx1ActionPerformed
@@ -107,12 +110,12 @@ public class ViewEscolherClima extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_rbtnNubladoActionPerformed
 
-    private void btnVoltarMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarMenuActionPerformed
+    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
 
-        ViewMenu menu = new ViewMenu();;
-        menu.setVisible(true);
+        ViewEscolherEvento evento = new ViewEscolherEvento();
+        evento.setVisible(true);
         dispose();
-    }//GEN-LAST:event_btnVoltarMenuActionPerformed
+    }//GEN-LAST:event_btnVoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -151,7 +154,7 @@ public class ViewEscolherClima extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnProx1;
-    private javax.swing.JButton btnVoltarMenu;
+    private javax.swing.JButton btnVoltar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblClima;
     private javax.swing.JRadioButton rbtnEnsolarado;

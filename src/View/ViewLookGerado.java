@@ -63,7 +63,7 @@ public class ViewLookGerado extends javax.swing.JFrame {
         });
         jPanel1.add(btnGerar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, 190, 50));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/backgound4.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/banner-vestindo-certo-09.jpg"))); // NOI18N
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -300, 450, 400));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 420, 90));
@@ -76,7 +76,7 @@ public class ViewLookGerado extends javax.swing.JFrame {
         jLabel1.setPreferredSize(new java.awt.Dimension(330, 40));
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 450, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/backgound4.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/banner-vestindo-certo-09.jpg"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 400));
 
         pack();
@@ -84,10 +84,10 @@ public class ViewLookGerado extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnGerarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGerarActionPerformed
-
-        //        VestindoCerto_Climate clima = new VestindoCerto_Climate();
-        //        clima.setVisible(true);
-        //        dispose();
+            
+        ViewEscolherLocal local = new ViewEscolherLocal();
+        local.setVisible(true);
+        dispose();        
     }//GEN-LAST:event_btnGerarActionPerformed
 
     private void btnGerarStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_btnGerarStateChanged
@@ -96,8 +96,8 @@ public class ViewLookGerado extends javax.swing.JFrame {
 
     private void btnVoltarMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarMenuActionPerformed
 
-        ViewMenu menu = new ViewMenu();;
-        menu.setVisible(true);
+        ViewEscolherClima clima = new ViewEscolherClima();
+        clima.setVisible(true);
         dispose();
     }//GEN-LAST:event_btnVoltarMenuActionPerformed
 
