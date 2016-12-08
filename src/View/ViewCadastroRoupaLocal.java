@@ -20,8 +20,7 @@ public class ViewCadastroRoupaLocal extends javax.swing.JFrame {
     ModelRoupa modelRoupa;
     public ViewCadastroRoupaLocal(ModelRoupa roupa) {
         modelRoupa = roupa;
-        initComponents();
-        lblTesteNome.setText(modelRoupa.getImagem());
+        initComponents();        
     }
 
     private ViewCadastroRoupaLocal() {
@@ -38,20 +37,21 @@ public class ViewCadastroRoupaLocal extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroupLocal = new javax.swing.ButtonGroup();
-        lblTesteNome = new javax.swing.JLabel();
         jButtonNext = new javax.swing.JButton();
         jRadioButtonCidadeGrande = new javax.swing.JRadioButton();
         jRadioButtonCidadeInterior = new javax.swing.JRadioButton();
         jRadioButtonChacaraSitio = new javax.swing.JRadioButton();
         jLabel1 = new javax.swing.JLabel();
         btnVoltarMenu = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(450, 400));
         setPreferredSize(new java.awt.Dimension(450, 400));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(lblTesteNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 180, 170, 25));
 
+        jButtonNext.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButtonNext.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icone-proximo.png"))); // NOI18N
         jButtonNext.setText("Próximo");
         jButtonNext.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -60,7 +60,6 @@ public class ViewCadastroRoupaLocal extends javax.swing.JFrame {
         });
         getContentPane().add(jButtonNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 330, 180, 50));
 
-        buttonGroupLocal.add(jRadioButtonCidadeGrande);
         jRadioButtonCidadeGrande.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jRadioButtonCidadeGrande.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButtonCidadeGrande.setSelected(true);
@@ -70,19 +69,17 @@ public class ViewCadastroRoupaLocal extends javax.swing.JFrame {
                 jRadioButtonCidadeGrandeActionPerformed(evt);
             }
         });
-        getContentPane().add(jRadioButtonCidadeGrande, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, -1, 30));
+        getContentPane().add(jRadioButtonCidadeGrande, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, -1, 30));
 
-        buttonGroupLocal.add(jRadioButtonCidadeInterior);
         jRadioButtonCidadeInterior.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jRadioButtonCidadeInterior.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButtonCidadeInterior.setText("Cidade Interior");
-        getContentPane().add(jRadioButtonCidadeInterior, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, -1, 30));
+        getContentPane().add(jRadioButtonCidadeInterior, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, -1, 30));
 
-        buttonGroupLocal.add(jRadioButtonChacaraSitio);
         jRadioButtonChacaraSitio.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jRadioButtonChacaraSitio.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButtonChacaraSitio.setText("Chácara / Sítio");
-        getContentPane().add(jRadioButtonChacaraSitio, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, -1, 30));
+        getContentPane().add(jRadioButtonChacaraSitio, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 250, -1, 30));
 
         jLabel1.setFont(new java.awt.Font("SansSerif", 1, 30)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -101,13 +98,16 @@ public class ViewCadastroRoupaLocal extends javax.swing.JFrame {
         });
         getContentPane().add(btnVoltarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 330, 210, 50));
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/banner-vestindo-certo-10.jpg"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
         setSize(new java.awt.Dimension(466, 439));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNextActionPerformed
         //JOptionPane.showMessageDialog(null, modelRoupa.getImagem());
-                
+
         if(jRadioButtonCidadeGrande.isSelected()){;
             modelRoupa.setFkLocal(1);
         }else if(jRadioButtonCidadeInterior.isSelected()){
@@ -118,7 +118,7 @@ public class ViewCadastroRoupaLocal extends javax.swing.JFrame {
         
         ViewCadastroRoupaEvento next = new ViewCadastroRoupaEvento(modelRoupa);
         next.setVisible(true);
-        dispose();     
+        dispose();  
     }//GEN-LAST:event_jButtonNextActionPerformed
 
     private void jRadioButtonCidadeGrandeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonCidadeGrandeActionPerformed
@@ -171,9 +171,9 @@ public class ViewCadastroRoupaLocal extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroupLocal;
     private javax.swing.JButton jButtonNext;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JRadioButton jRadioButtonChacaraSitio;
     private javax.swing.JRadioButton jRadioButtonCidadeGrande;
     private javax.swing.JRadioButton jRadioButtonCidadeInterior;
-    private javax.swing.JLabel lblTesteNome;
     // End of variables declaration//GEN-END:variables
 }

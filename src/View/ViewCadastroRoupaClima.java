@@ -46,26 +46,30 @@ public class ViewCadastroRoupaClima extends javax.swing.JFrame {
         btnVoltar = new javax.swing.JButton();
         jRadioButtonNublado = new javax.swing.JRadioButton();
         jRadioButtonChuva = new javax.swing.JRadioButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(450, 400));
         setPreferredSize(new java.awt.Dimension(450, 400));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        buttonGroupClima.add(jRadioButtonSol);
         jRadioButtonSol.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jRadioButtonSol.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButtonSol.setSelected(true);
         jRadioButtonSol.setText("Sol");
         jRadioButtonSol.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        getContentPane().add(jRadioButtonSol, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, 120, 76));
+        jRadioButtonSol.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonSolActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jRadioButtonSol, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 120, 30));
 
-        buttonGroupClima.add(jRadioButtonSeco);
         jRadioButtonSeco.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jRadioButtonSeco.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButtonSeco.setText("Seco");
         jRadioButtonSeco.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        getContentPane().add(jRadioButtonSeco, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 180, 80, 78));
+        getContentPane().add(jRadioButtonSeco, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 208, 80, 30));
 
         btnNext.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnNext.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icone-proximo.png"))); // NOI18N
@@ -96,17 +100,26 @@ public class ViewCadastroRoupaClima extends javax.swing.JFrame {
         });
         getContentPane().add(btnVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 190, 50));
 
-        buttonGroupClima.add(jRadioButtonNublado);
+        jRadioButtonNublado.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jRadioButtonNublado.setForeground(new java.awt.Color(240, 240, 240));
         jRadioButtonNublado.setText("Nublado");
         getContentPane().add(jRadioButtonNublado, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, -1, -1));
 
-        buttonGroupClima.add(jRadioButtonChuva);
+        jRadioButtonChuva.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jRadioButtonChuva.setForeground(new java.awt.Color(240, 240, 240));
         jRadioButtonChuva.setText("Chuva");
         getContentPane().add(jRadioButtonChuva, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 110, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/banner-vestindo-certo-15.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 400));
 
         setSize(new java.awt.Dimension(450, 422));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jRadioButtonSolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonSolActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButtonSolActionPerformed
 
     private void btnNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextActionPerformed
         //AQUI DEVE SER GRAVADO A ROUPA
@@ -175,6 +188,7 @@ public class ViewCadastroRoupaClima extends javax.swing.JFrame {
     private javax.swing.JButton btnNext;
     private javax.swing.JButton btnVoltar;
     private javax.swing.ButtonGroup buttonGroupClima;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JRadioButton jRadioButtonChuva;
     private javax.swing.JRadioButton jRadioButtonNublado;
     private javax.swing.JRadioButton jRadioButtonSeco;

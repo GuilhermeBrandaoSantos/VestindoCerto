@@ -122,6 +122,7 @@ public class ViewCadastroRoupaResultado extends javax.swing.JFrame {
         btnGravar = new javax.swing.JButton();
         btnVoltar = new javax.swing.JButton();
         lblClima = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(450, 400));
@@ -129,17 +130,21 @@ public class ViewCadastroRoupaResultado extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(450, 400));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabelClima.setText("CLIMA");
-        getContentPane().add(jLabelClima, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 230, 210, 20));
+        jLabelClima.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabelClima.setForeground(new java.awt.Color(240, 240, 240));
+        jLabelClima.setText("CLIMA:");
+        getContentPane().add(jLabelClima, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 230, 210, 20));
+        getContentPane().add(jLabelImagem, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 240, 210));
 
-        jLabelImagem.setText("IMAGEM");
-        getContentPane().add(jLabelImagem, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 240, 240));
+        jLabelLocal.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabelLocal.setForeground(new java.awt.Color(240, 240, 240));
+        jLabelLocal.setText("LOCAL:");
+        getContentPane().add(jLabelLocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 130, 260, 20));
 
-        jLabelLocal.setText("LOCAL");
-        getContentPane().add(jLabelLocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 130, 260, 20));
-
-        jLabelEvento.setText("EVENTO");
-        getContentPane().add(jLabelEvento, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 180, 230, 20));
+        jLabelEvento.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabelEvento.setForeground(new java.awt.Color(240, 240, 240));
+        jLabelEvento.setText("EVENTO:");
+        getContentPane().add(jLabelEvento, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 180, 230, 20));
 
         btnGravar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnGravar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icone-gravar.png"))); // NOI18N
@@ -149,7 +154,7 @@ public class ViewCadastroRoupaResultado extends javax.swing.JFrame {
                 btnGravarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnGravar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 360, 190, 50));
+        getContentPane().add(btnGravar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 330, 190, 50));
 
         btnVoltar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icone-voltar.png"))); // NOI18N
@@ -159,7 +164,7 @@ public class ViewCadastroRoupaResultado extends javax.swing.JFrame {
                 btnVoltarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, 190, 50));
+        getContentPane().add(btnVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, 190, 50));
 
         lblClima.setFont(new java.awt.Font("SansSerif", 1, 30)); // NOI18N
         lblClima.setForeground(new java.awt.Color(255, 255, 255));
@@ -168,7 +173,12 @@ public class ViewCadastroRoupaResultado extends javax.swing.JFrame {
         lblClima.setMaximumSize(new java.awt.Dimension(250, 40));
         lblClima.setMinimumSize(new java.awt.Dimension(250, 40));
         lblClima.setPreferredSize(new java.awt.Dimension(330, 40));
-        getContentPane().add(lblClima, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 450, 40));
+        getContentPane().add(lblClima, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 450, 40));
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/banner-vestindo-certo-13.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         setSize(new java.awt.Dimension(466, 439));
         setLocationRelativeTo(null);
@@ -238,6 +248,7 @@ public class ViewCadastroRoupaResultado extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnGravar;
     private javax.swing.JButton btnVoltar;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelClima;
     private javax.swing.JLabel jLabelEvento;
     private javax.swing.JLabel jLabelImagem;
