@@ -56,6 +56,8 @@ public class ViewCadastroRoupaLocal extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(450, 400));
+        setPreferredSize(new java.awt.Dimension(450, 400));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(lblTesteNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 180, 170, 25));
 
