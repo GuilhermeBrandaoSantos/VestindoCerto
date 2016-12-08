@@ -50,6 +50,7 @@ public class ViewCadastroRoupa extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         btnVoltarMenu = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         jRadioButtonMenuItem1.setSelected(true);
         jRadioButtonMenuItem1.setText("jRadioButtonMenuItem1");
@@ -57,24 +58,23 @@ public class ViewCadastroRoupa extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
         setMinimumSize(new java.awt.Dimension(450, 400));
-        setPreferredSize(new java.awt.Dimension(450, 400));
         setSize(new java.awt.Dimension(450, 400));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("SansSerif", 1, 30)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Cadastro de Roupa");
         jLabel1.setPreferredSize(new java.awt.Dimension(330, 40));
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 450, -1));
 
         txtImage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtImageActionPerformed(evt);
             }
         });
-        getContentPane().add(txtImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 220, 30));
-        getContentPane().add(lblImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 220, 210));
+        getContentPane().add(txtImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, 220, 30));
+        getContentPane().add(lblImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, 200, 190));
 
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icone-selecionar.png"))); // NOI18N
@@ -84,7 +84,7 @@ public class ViewCadastroRoupa extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 70, 190, 50));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 190, 30));
 
         jButton2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icone-enviar.png"))); // NOI18N
@@ -106,37 +106,40 @@ public class ViewCadastroRoupa extends javax.swing.JFrame {
         });
         getContentPane().add(btnVoltarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 330, 210, 50));
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/banner-vestindo-certo-14.jpg"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
         setSize(new java.awt.Dimension(466, 439));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void txtImageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtImageActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtImageActionPerformed
+
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         JFileChooser chooser = new JFileChooser(); //Objeto de manipulação dos arquivos
         int res = chooser.showOpenDialog(null); //resposta
-        
-        String caminhoFisico;      
+
+        String caminhoFisico;
         FileNameExtensionFilter filter = new FileNameExtensionFilter("JPG PNG GIF Images", "jpg", "gif", "png");
         chooser.setFileFilter(filter);
-        
+
         if(res == JFileChooser.APPROVE_OPTION){
             File arquivo = chooser.getSelectedFile();
             try {
                 caminhoFisico = chooser.getCurrentDirectory()+"/"+chooser.getSelectedFile().getName();
                 txtImage.setText(caminhoFisico);
-                
+
                 imagem = ManipularImagem.setImagemDimensao(arquivo.getAbsolutePath(), 240, 240);
                 lblImage.setIcon(new ImageIcon(imagem));
-                
+
             } catch (Exception ex) {
-               // System.out.println(ex.printStackTrace().toString());
+                // System.out.println(ex.printStackTrace().toString());
             }
             //System.out.println("diretorio: "+chooser.getCurrentDirectory());
         }
     }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void txtImageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtImageActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtImageActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         String controle = txtImage.getText();
@@ -167,7 +170,7 @@ public class ViewCadastroRoupa extends javax.swing.JFrame {
 
             ViewCadastroRoupaLocal next = new ViewCadastroRoupaLocal(modelRoupa);
             next.setVisible(true);
-            dispose();     
+            dispose();
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -217,8 +220,10 @@ public class ViewCadastroRoupa extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
     private javax.swing.JLabel lblImage;
     private javax.swing.JTextField txtImage;
+    private javax.swing.JTextField txtImage1;
     // End of variables declaration//GEN-END:variables
 }
