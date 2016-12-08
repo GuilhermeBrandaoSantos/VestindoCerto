@@ -50,9 +50,9 @@ public class ViewCadastroRoupaClima extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(450, 400));
-        setPreferredSize(new java.awt.Dimension(450, 400));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        buttonGroupClima.add(jRadioButtonSol);
         jRadioButtonSol.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jRadioButtonSol.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButtonSol.setSelected(true);
@@ -65,6 +65,7 @@ public class ViewCadastroRoupaClima extends javax.swing.JFrame {
         });
         getContentPane().add(jRadioButtonSol, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 120, 30));
 
+        buttonGroupClima.add(jRadioButtonSeco);
         jRadioButtonSeco.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jRadioButtonSeco.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButtonSeco.setText("Seco");
@@ -100,11 +101,13 @@ public class ViewCadastroRoupaClima extends javax.swing.JFrame {
         });
         getContentPane().add(btnVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 190, 50));
 
+        buttonGroupClima.add(jRadioButtonNublado);
         jRadioButtonNublado.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jRadioButtonNublado.setForeground(new java.awt.Color(240, 240, 240));
         jRadioButtonNublado.setText("Nublado");
         getContentPane().add(jRadioButtonNublado, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, -1, -1));
 
+        buttonGroupClima.add(jRadioButtonChuva);
         jRadioButtonChuva.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jRadioButtonChuva.setForeground(new java.awt.Color(240, 240, 240));
         jRadioButtonChuva.setText("Chuva");

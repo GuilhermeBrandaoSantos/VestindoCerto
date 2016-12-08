@@ -50,9 +50,9 @@ public class ViewCadastroRoupaEvento extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(450, 400));
-        setPreferredSize(new java.awt.Dimension(450, 400));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        buttonGroupEvento.add(jRadioButtonFaculdade);
         jRadioButtonFaculdade.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jRadioButtonFaculdade.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButtonFaculdade.setSelected(true);
@@ -64,11 +64,13 @@ public class ViewCadastroRoupaEvento extends javax.swing.JFrame {
         });
         getContentPane().add(jRadioButtonFaculdade, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, -1, -1));
 
+        buttonGroupEvento.add(jRadioButtonTrabalho);
         jRadioButtonTrabalho.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jRadioButtonTrabalho.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButtonTrabalho.setText("Trabalho");
         getContentPane().add(jRadioButtonTrabalho, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 110, -1, -1));
 
+        buttonGroupEvento.add(jRadioButtonFesta);
         jRadioButtonFesta.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jRadioButtonFesta.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButtonFesta.setText("Festa");
@@ -93,16 +95,19 @@ public class ViewCadastroRoupaEvento extends javax.swing.JFrame {
         lblEvento.setPreferredSize(new java.awt.Dimension(330, 40));
         getContentPane().add(lblEvento, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 450, -1));
 
+        buttonGroupEvento.add(jRadioButtonBalada);
         jRadioButtonBalada.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jRadioButtonBalada.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButtonBalada.setText("Balada");
         getContentPane().add(jRadioButtonBalada, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 170, -1, -1));
 
+        buttonGroupEvento.add(jRadioButtonCasamento);
         jRadioButtonCasamento.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jRadioButtonCasamento.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButtonCasamento.setText("Casamento");
         getContentPane().add(jRadioButtonCasamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 230, -1, -1));
 
+        buttonGroupEvento.add(jRadioButtonAcademia);
         jRadioButtonAcademia.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jRadioButtonAcademia.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButtonAcademia.setText("Academia");

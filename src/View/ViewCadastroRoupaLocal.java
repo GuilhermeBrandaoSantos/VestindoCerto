@@ -47,7 +47,6 @@ public class ViewCadastroRoupaLocal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(450, 400));
-        setPreferredSize(new java.awt.Dimension(450, 400));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButtonNext.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -60,6 +59,7 @@ public class ViewCadastroRoupaLocal extends javax.swing.JFrame {
         });
         getContentPane().add(jButtonNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 330, 180, 50));
 
+        buttonGroupLocal.add(jRadioButtonCidadeGrande);
         jRadioButtonCidadeGrande.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jRadioButtonCidadeGrande.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButtonCidadeGrande.setSelected(true);
@@ -71,11 +71,13 @@ public class ViewCadastroRoupaLocal extends javax.swing.JFrame {
         });
         getContentPane().add(jRadioButtonCidadeGrande, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, -1, 30));
 
+        buttonGroupLocal.add(jRadioButtonCidadeInterior);
         jRadioButtonCidadeInterior.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jRadioButtonCidadeInterior.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButtonCidadeInterior.setText("Cidade Interior");
         getContentPane().add(jRadioButtonCidadeInterior, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, -1, 30));
 
+        buttonGroupLocal.add(jRadioButtonChacaraSitio);
         jRadioButtonChacaraSitio.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jRadioButtonChacaraSitio.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButtonChacaraSitio.setText("Chácara / Sítio");
