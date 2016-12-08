@@ -5,10 +5,18 @@
  */
 package Controller;
 
+import DAO.DAORoupa;
+import Model.ModelRoupa;
+import java.sql.SQLException;
+
 /**
  *
  * @author internet
  */
 public class ControllerRoupa {
-    
+    public boolean storeRoupa(ModelRoupa roupa) throws SQLException{
+        DAORoupa daoRoupa = new DAORoupa();
+        boolean controle = daoRoupa.storeRoupa(roupa);
+        return controle;
+    }
 }

@@ -40,7 +40,7 @@ public class ViewCadastroRoupaClima extends javax.swing.JFrame {
 
         jRadioButtonSol = new javax.swing.JRadioButton();
         jRadioButtonSeco = new javax.swing.JRadioButton();
-        btnGravar = new javax.swing.JButton();
+        btnNext = new javax.swing.JButton();
         lblClima = new javax.swing.JLabel();
         btnVoltar = new javax.swing.JButton();
         jRadioButtonNublado = new javax.swing.JRadioButton();
@@ -53,6 +53,7 @@ public class ViewCadastroRoupaClima extends javax.swing.JFrame {
 
         jRadioButtonSol.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jRadioButtonSol.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButtonSol.setSelected(true);
         jRadioButtonSol.setText("Sol");
         jRadioButtonSol.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(jRadioButtonSol, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, 120, 76));
@@ -61,17 +62,17 @@ public class ViewCadastroRoupaClima extends javax.swing.JFrame {
         jRadioButtonSeco.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButtonSeco.setText("Seco");
         jRadioButtonSeco.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        getContentPane().add(jRadioButtonSeco, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 180, 70, 78));
+        getContentPane().add(jRadioButtonSeco, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 180, 80, 78));
 
-        btnGravar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        btnGravar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icone-gravar.png"))); // NOI18N
-        btnGravar.setText("Gravar");
-        btnGravar.addActionListener(new java.awt.event.ActionListener() {
+        btnNext.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btnNext.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icone-proximo.png"))); // NOI18N
+        btnNext.setText("Próximo");
+        btnNext.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGravarActionPerformed(evt);
+                btnNextActionPerformed(evt);
             }
         });
-        getContentPane().add(btnGravar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 330, 190, 50));
+        getContentPane().add(btnNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 330, 190, 50));
 
         lblClima.setFont(new java.awt.Font("SansSerif", 1, 30)); // NOI18N
         lblClima.setForeground(new java.awt.Color(255, 255, 255));
@@ -98,11 +99,11 @@ public class ViewCadastroRoupaClima extends javax.swing.JFrame {
         jRadioButtonChuva.setText("Chuva");
         getContentPane().add(jRadioButtonChuva, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 110, -1, -1));
 
-        setSize(new java.awt.Dimension(450, 400));
+        setSize(new java.awt.Dimension(450, 422));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnGravarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGravarActionPerformed
+    private void btnNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextActionPerformed
         //AQUI DEVE SER GRAVADO A ROUPA
         if(jRadioButtonSol.isSelected()){;
             modelRoupa.setFk_clima(1);
@@ -122,7 +123,7 @@ public class ViewCadastroRoupaClima extends javax.swing.JFrame {
         } catch (IOException ex) {
             Logger.getLogger(ViewCadastroRoupaClima.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_btnGravarActionPerformed
+    }//GEN-LAST:event_btnNextActionPerformed
 
     private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
         ViewCadastroRoupaEvento evento = new ViewCadastroRoupaEvento(modelRoupa);
@@ -166,14 +167,7 @@ public class ViewCadastroRoupaClima extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnGravar;
-    private javax.swing.JButton btnProx1;
-    private javax.swing.JButton btnProx2;
-    private javax.swing.JButton btnProx3;
-    private javax.swing.JButton btnProx4;
-    private javax.swing.JButton btnProx5;
-    private javax.swing.JButton btnProx6;
-    private javax.swing.JButton btnProx7;
+    private javax.swing.JButton btnNext;
     private javax.swing.JButton btnVoltar;
     private javax.swing.JRadioButton jRadioButtonChuva;
     private javax.swing.JRadioButton jRadioButtonNublado;

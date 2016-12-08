@@ -5,10 +5,15 @@
  */
 package View;
 
+import Controller.ControllerRoupa;
 import Model.ModelRoupa;
 import java.io.File;
 import java.io.IOException;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -105,6 +110,9 @@ public class ViewCadastroRoupaResultado extends javax.swing.JFrame {
         jLabelImagem = new javax.swing.JLabel();
         jLabelLocal = new javax.swing.JLabel();
         jLabelEvento = new javax.swing.JLabel();
+        btnGravar = new javax.swing.JButton();
+        btnVoltar = new javax.swing.JButton();
+        lblClima = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(450, 400));
@@ -113,20 +121,75 @@ public class ViewCadastroRoupaResultado extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabelClima.setText("CLIMA");
-        getContentPane().add(jLabelClima, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 190, 210, 20));
+        getContentPane().add(jLabelClima, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 230, 210, 20));
 
         jLabelImagem.setText("IMAGEM");
-        getContentPane().add(jLabelImagem, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 240, 240));
+        getContentPane().add(jLabelImagem, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 240, 240));
 
         jLabelLocal.setText("LOCAL");
-        getContentPane().add(jLabelLocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 90, 260, 20));
+        getContentPane().add(jLabelLocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 130, 260, 20));
 
         jLabelEvento.setText("EVENTO");
-        getContentPane().add(jLabelEvento, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 140, 230, 20));
+        getContentPane().add(jLabelEvento, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 180, 230, 20));
+
+        btnGravar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btnGravar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icone-gravar.png"))); // NOI18N
+        btnGravar.setText("Gravar");
+        btnGravar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGravarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnGravar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 360, 190, 50));
+
+        btnVoltar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btnVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icone-voltar.png"))); // NOI18N
+        btnVoltar.setText("Voltar");
+        btnVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, 190, 50));
+
+        lblClima.setFont(new java.awt.Font("SansSerif", 1, 30)); // NOI18N
+        lblClima.setForeground(new java.awt.Color(255, 255, 255));
+        lblClima.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblClima.setText("Revisão da Roupa");
+        lblClima.setMaximumSize(new java.awt.Dimension(250, 40));
+        lblClima.setMinimumSize(new java.awt.Dimension(250, 40));
+        lblClima.setPreferredSize(new java.awt.Dimension(330, 40));
+        getContentPane().add(lblClima, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 450, 40));
 
         setSize(new java.awt.Dimension(466, 439));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnGravarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGravarActionPerformed
+        try {
+            ControllerRoupa storeRoupa = new ControllerRoupa();
+            Boolean controle = storeRoupa.storeRoupa(modelRoupa);
+            if(controle){
+                JOptionPane.showMessageDialog(null, "Roupa cadastrada com sucesso.");
+                ViewMenu menu = new ViewMenu();
+                menu.setVisible(true);
+                dispose();
+            }else{
+                JOptionPane.showMessageDialog(null, "Algo deu errado, tente novamente.");
+                ViewMenu menu = new ViewMenu();
+                menu.setVisible(true);
+                dispose();
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(ViewCadastroRoupaResultado.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_btnGravarActionPerformed
+
+    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
+        ViewCadastroRoupaEvento evento = new ViewCadastroRoupaEvento(modelRoupa);
+        evento.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnVoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -164,9 +227,12 @@ public class ViewCadastroRoupaResultado extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnGravar;
+    private javax.swing.JButton btnVoltar;
     private javax.swing.JLabel jLabelClima;
     private javax.swing.JLabel jLabelEvento;
     private javax.swing.JLabel jLabelImagem;
     private javax.swing.JLabel jLabelLocal;
+    private javax.swing.JLabel lblClima;
     // End of variables declaration//GEN-END:variables
 }
