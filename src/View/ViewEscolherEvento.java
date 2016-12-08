@@ -27,7 +27,7 @@ public class ViewEscolherEvento extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroupEvento = new javax.swing.ButtonGroup();
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jRadioButton3 = new javax.swing.JRadioButton();
@@ -42,7 +42,7 @@ public class ViewEscolherEvento extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        buttonGroup1.add(jRadioButton1);
+        buttonGroupEvento.add(jRadioButton1);
         jRadioButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton1.setSelected(true);
@@ -54,13 +54,13 @@ public class ViewEscolherEvento extends javax.swing.JFrame {
         });
         getContentPane().add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, -1, -1));
 
-        buttonGroup1.add(jRadioButton2);
+        buttonGroupEvento.add(jRadioButton2);
         jRadioButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton2.setText("Trabalho");
         getContentPane().add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 250, -1, -1));
 
-        buttonGroup1.add(jRadioButton3);
+        buttonGroupEvento.add(jRadioButton3);
         jRadioButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jRadioButton3.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton3.setText("Festa Infantíl");
@@ -85,19 +85,19 @@ public class ViewEscolherEvento extends javax.swing.JFrame {
         lblEvento.setPreferredSize(new java.awt.Dimension(330, 40));
         getContentPane().add(lblEvento, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 450, -1));
 
-        buttonGroup1.add(jRadioButton4);
+        buttonGroupEvento.add(jRadioButton4);
         jRadioButton4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jRadioButton4.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton4.setText("Balada");
         getContentPane().add(jRadioButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 180, -1, -1));
 
-        buttonGroup1.add(jRadioButton5);
+        buttonGroupEvento.add(jRadioButton5);
         jRadioButton5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jRadioButton5.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton5.setText("Casamento");
         getContentPane().add(jRadioButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 250, -1, -1));
 
-        buttonGroup1.add(jRadioButton6);
+        buttonGroupEvento.add(jRadioButton6);
         jRadioButton6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jRadioButton6.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton6.setText("Passeio");
@@ -177,7 +177,7 @@ public class ViewEscolherEvento extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnGerarLook;
     private javax.swing.JButton btnVoltarMenu;
-    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroupEvento;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;

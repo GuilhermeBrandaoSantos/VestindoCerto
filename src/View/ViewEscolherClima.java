@@ -27,6 +27,7 @@ public class ViewEscolherClima extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroupClima = new javax.swing.ButtonGroup();
         rbtnEnsolarado = new javax.swing.JRadioButton();
         rbtnFrio = new javax.swing.JRadioButton();
         btnProx1 = new javax.swing.JButton();
@@ -38,12 +39,14 @@ public class ViewEscolherClima extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        buttonGroupClima.add(rbtnEnsolarado);
         rbtnEnsolarado.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         rbtnEnsolarado.setForeground(new java.awt.Color(255, 255, 255));
         rbtnEnsolarado.setText("Ensolarado");
         rbtnEnsolarado.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(rbtnEnsolarado, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 160, 120, 76));
 
+        buttonGroupClima.add(rbtnFrio);
         rbtnFrio.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         rbtnFrio.setForeground(new java.awt.Color(255, 255, 255));
         rbtnFrio.setText("Frio");
@@ -69,6 +72,7 @@ public class ViewEscolherClima extends javax.swing.JFrame {
         lblClima.setPreferredSize(new java.awt.Dimension(330, 40));
         getContentPane().add(lblClima, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 450, 40));
 
+        buttonGroupClima.add(rbtnNublado);
         rbtnNublado.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         rbtnNublado.setForeground(new java.awt.Color(255, 255, 255));
         rbtnNublado.setSelected(true);
@@ -155,6 +159,7 @@ public class ViewEscolherClima extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnProx1;
     private javax.swing.JButton btnVoltar;
+    private javax.swing.ButtonGroup buttonGroupClima;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblClima;
     private javax.swing.JRadioButton rbtnEnsolarado;
