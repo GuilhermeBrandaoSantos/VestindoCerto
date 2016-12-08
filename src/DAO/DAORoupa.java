@@ -26,9 +26,9 @@ public class DAORoupa {
             PreparedStatement stmt = conexao.getConexao().prepareStatement(sql);
 
             stmt.setString(1, roupa.getImagem());
-            stmt.setInt(2, roupa.getFk_clima());
-            stmt.setInt(3, roupa.getFk_evento());
-            stmt.setInt(4, roupa.getFk_local());
+            stmt.setInt(2, roupa.getFkClima());
+            stmt.setInt(3, roupa.getFkEvento());
+            stmt.setInt(4, roupa.getFkLocal());
 
             stmt.addBatch();
             System.out.println(sql);

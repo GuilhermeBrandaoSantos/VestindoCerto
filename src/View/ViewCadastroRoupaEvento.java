@@ -133,17 +133,17 @@ public class ViewCadastroRoupaEvento extends javax.swing.JFrame {
 
     private void btnGerarLookActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGerarLookActionPerformed
         if(jRadioButtonFaculdade.isSelected()){;
-            modelRoupa.setFk_evento(1);
+            modelRoupa.setFkEvento(1);
         }else if(jRadioButtonTrabalho.isSelected()){
-            modelRoupa.setFk_evento(2);
+            modelRoupa.setFkEvento(2);
         }else if(jRadioButtonFesta.isSelected()){
-            modelRoupa.setFk_evento(3);
+            modelRoupa.setFkEvento(3);
         }else if(jRadioButtonBalada.isSelected()){
-            modelRoupa.setFk_evento(4);
+            modelRoupa.setFkEvento(4);
         }else if(jRadioButtonCasamento.isSelected()){
-            modelRoupa.setFk_evento(5);
+            modelRoupa.setFkEvento(5);
         }else if(jRadioButtonAcademia.isSelected()){
-            modelRoupa.setFk_evento(6);
+            modelRoupa.setFkEvento(6);
         }
         
         ViewCadastroRoupaClima clima = new ViewCadastroRoupaClima(modelRoupa);

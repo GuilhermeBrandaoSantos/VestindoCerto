@@ -109,11 +109,11 @@ public class ViewCadastroRoupaLocal extends javax.swing.JFrame {
         //JOptionPane.showMessageDialog(null, modelRoupa.getImagem());
                 
         if(jRadioButtonCidadeGrande.isSelected()){;
-            modelRoupa.setFk_local(1);
+            modelRoupa.setFkLocal(1);
         }else if(jRadioButtonCidadeInterior.isSelected()){
-            modelRoupa.setFk_local(2);
+            modelRoupa.setFkLocal(2);
         }else if(jRadioButtonChacaraSitio.isSelected()){
-            modelRoupa.setFk_local(3);
+            modelRoupa.setFkLocal(3);
         }
         
         ViewCadastroRoupaEvento next = new ViewCadastroRoupaEvento(modelRoupa);

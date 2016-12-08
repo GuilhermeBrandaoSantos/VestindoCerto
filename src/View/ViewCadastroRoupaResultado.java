@@ -34,9 +34,14 @@ public class ViewCadastroRoupaResultado extends javax.swing.JFrame {
         ImageIcon image = new ImageIcon(imagePath+modelRoupa.getImagem());
         jLabelImagem.setIcon(image);
         
-        
+        this.jFrameSetLocal();
+        this.jFrameSetEvento();
+        this.jFrameSetClima();
+    }
+    
+    private void jFrameSetLocal(){
         //SET LOCAL
-        switch (modelRoupa.getFk_local()) {
+        switch (modelRoupa.getFkLocal()) {
             case 1:
                 jLabelLocal.setText("Cidade Grande");
                 break;
@@ -48,10 +53,12 @@ public class ViewCadastroRoupaResultado extends javax.swing.JFrame {
                 break;
             default:
                 break;
-        }
-        
+        }    
+    }
+    
+    private void jFrameSetEvento(){  
         //SET EVENTO
-        switch (modelRoupa.getFk_evento()) {
+        switch (modelRoupa.getFkEvento()) {
             case 1:
                 jLabelEvento.setText("Faculdade");
                 break;
@@ -72,10 +79,12 @@ public class ViewCadastroRoupaResultado extends javax.swing.JFrame {
                 break;
             default:
                 break;
-        }
-        
+        }  
+    }
+    
+    private void jFrameSetClima(){
         //SET CLIMA
-        switch (modelRoupa.getFk_clima()) {
+        switch (modelRoupa.getFkClima()) {
             case 1:
                 jLabelClima.setText("Sol");
                 break;

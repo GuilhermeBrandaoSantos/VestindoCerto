@@ -42,27 +42,27 @@ public class ModelRoupa {
         this.descricao = descricao;
     }
 
-    public int getFk_clima() {
+    public int getFkClima() {
         return fk_clima;
     }
 
-    public void setFk_clima(int fk_clima) {
+    public void setFkClima(int fk_clima) {
         this.fk_clima = fk_clima;
     }
 
-    public int getFk_evento() {
+    public int getFkEvento() {
         return fk_evento;
     }
 
-    public void setFk_evento(int fk_evento) {
+    public void setFkEvento(int fk_evento) {
         this.fk_evento = fk_evento;
     }
 
-    public int getFk_local() {
+    public int getFkLocal() {
         return fk_local;
     }
 
-    public void setFk_local(int fk_local) {
+    public void setFkLocal(int fk_local) {
         this.fk_local = fk_local;
     }   
 }

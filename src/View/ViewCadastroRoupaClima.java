@@ -38,6 +38,7 @@ public class ViewCadastroRoupaClima extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroupClima = new javax.swing.ButtonGroup();
         jRadioButtonSol = new javax.swing.JRadioButton();
         jRadioButtonSeco = new javax.swing.JRadioButton();
         btnNext = new javax.swing.JButton();
@@ -51,6 +52,7 @@ public class ViewCadastroRoupaClima extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(450, 400));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        buttonGroupClima.add(jRadioButtonSol);
         jRadioButtonSol.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jRadioButtonSol.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButtonSol.setSelected(true);
@@ -58,6 +60,7 @@ public class ViewCadastroRoupaClima extends javax.swing.JFrame {
         jRadioButtonSol.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().add(jRadioButtonSol, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, 120, 76));
 
+        buttonGroupClima.add(jRadioButtonSeco);
         jRadioButtonSeco.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jRadioButtonSeco.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButtonSeco.setText("Seco");
@@ -93,9 +96,11 @@ public class ViewCadastroRoupaClima extends javax.swing.JFrame {
         });
         getContentPane().add(btnVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 190, 50));
 
+        buttonGroupClima.add(jRadioButtonNublado);
         jRadioButtonNublado.setText("Nublado");
         getContentPane().add(jRadioButtonNublado, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, -1, -1));
 
+        buttonGroupClima.add(jRadioButtonChuva);
         jRadioButtonChuva.setText("Chuva");
         getContentPane().add(jRadioButtonChuva, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 110, -1, -1));
 
@@ -106,13 +111,13 @@ public class ViewCadastroRoupaClima extends javax.swing.JFrame {
     private void btnNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextActionPerformed
         //AQUI DEVE SER GRAVADO A ROUPA
         if(jRadioButtonSol.isSelected()){;
-            modelRoupa.setFk_clima(1);
+            modelRoupa.setFkClima(1);
         }else if(jRadioButtonChuva.isSelected()){
-            modelRoupa.setFk_clima(2);
+            modelRoupa.setFkClima(2);
         }else if(jRadioButtonNublado.isSelected()){
-            modelRoupa.setFk_clima(3);
+            modelRoupa.setFkClima(3);
         }else if(jRadioButtonSeco.isSelected()){
-            modelRoupa.setFk_clima(4);
+            modelRoupa.setFkClima(4);
         }
         
         ViewCadastroRoupaResultado resultado;
@@ -169,6 +174,7 @@ public class ViewCadastroRoupaClima extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnNext;
     private javax.swing.JButton btnVoltar;
+    private javax.swing.ButtonGroup buttonGroupClima;
     private javax.swing.JRadioButton jRadioButtonChuva;
     private javax.swing.JRadioButton jRadioButtonNublado;
     private javax.swing.JRadioButton jRadioButtonSeco;
