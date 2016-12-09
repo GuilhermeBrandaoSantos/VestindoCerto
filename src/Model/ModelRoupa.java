@@ -17,6 +17,7 @@ public class ModelRoupa {
     private int fk_clima;
     private int fk_evento;
     private int fk_local;
+    private int fk_tipo;
 
     public int getId() {
         return id;
@@ -64,5 +65,15 @@ public class ModelRoupa {
 
     public void setFkLocal(int fk_local) {
         this.fk_local = fk_local;
-    }   
+    } 
+
+    public int getFkTipo() {
+        return fk_tipo;
+    }
+
+    public void setFkTipo(int fk_tipo) {
+        this.fk_tipo = fk_tipo;
+    }
+    
+    
 }

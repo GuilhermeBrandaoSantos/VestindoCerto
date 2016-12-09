@@ -17,9 +17,9 @@ import java.sql.SQLException;
 public class DAORoupa {
     public boolean storeRoupa(ModelRoupa roupa) throws SQLException {
         String sql = "";
-        sql += "insert into roupa (`imagem`, `fk_clima`, `fk_evento`, `fk_local`)";
+        sql += "insert into roupa (`imagem`, `fk_clima`, `fk_evento`, `fk_local`, `fk_tipo`)";
         sql += " VALUES ";
-        sql += "(?,?,?,?);";
+        sql += "(?,?,?,?,?);";
         
         try {
             ModelConexaoMysql conexao = new ModelConexaoMysql();
@@ -29,6 +29,7 @@ public class DAORoupa {
             stmt.setInt(2, roupa.getFkClima());
             stmt.setInt(3, roupa.getFkEvento());
             stmt.setInt(4, roupa.getFkLocal());
+            stmt.setInt(5, roupa.getFkTipo());
 
             stmt.addBatch();
             System.out.println(sql);
