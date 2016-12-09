@@ -51,6 +51,11 @@ public class ViewMenu extends javax.swing.JFrame {
         btnPerfil.setFont(new java.awt.Font("Tahoma", 0, 17)); // NOI18N
         btnPerfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icone-perfil.png"))); // NOI18N
         btnPerfil.setText("Perfil");
+        btnPerfil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPerfilActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, 190, 50));
 
         btnSair.setFont(new java.awt.Font("Tahoma", 0, 17)); // NOI18N
@@ -104,6 +109,13 @@ public class ViewMenu extends javax.swing.JFrame {
         viewCadastroRoupa.setVisible(true);
         dispose();
     }//GEN-LAST:event_btnCadastrarRoupaActionPerformed
+
+    private void btnPerfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPerfilActionPerformed
+        // TODO add your handling code here:
+        ViewPerfil perfil = new ViewPerfil();
+        perfil.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnPerfilActionPerformed
 
     /**
      * @param args the command line arguments

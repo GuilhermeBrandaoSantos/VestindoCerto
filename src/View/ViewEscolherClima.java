@@ -134,9 +134,15 @@ public class ViewEscolherClima extends javax.swing.JFrame {
             modelRoupa.setFkClima(4);
         }
         
-        ViewLookGerado look = new ViewLookGerado(modelRoupa);
-        look.setVisible(true);
-        dispose();
+        ViewLookGerado look;
+        try {
+            look = new ViewLookGerado(modelRoupa);
+            look.setVisible(true);
+            dispose();
+        } catch (IOException ex) {
+            Logger.getLogger(ViewEscolherClima.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
     }//GEN-LAST:event_btnProx1ActionPerformed
 
     private void jRadioButtonNubladoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonNubladoActionPerformed
