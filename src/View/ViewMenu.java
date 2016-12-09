@@ -35,6 +35,7 @@ public class ViewMenu extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("MENU");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnCadastrarRoupa.setFont(new java.awt.Font("Tahoma", 0, 17)); // NOI18N

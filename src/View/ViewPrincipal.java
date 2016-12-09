@@ -30,23 +30,18 @@ public class ViewPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
         btnEntrar = new javax.swing.JButton();
         lblLogin = new javax.swing.JLabel();
         txtEmail = new javax.swing.JTextField();
         lblSenha = new javax.swing.JLabel();
         txtSenha = new javax.swing.JPasswordField();
         btnCadastrar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
 
-        jLabel3.setText("jLabel3");
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("LOGIN");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(88, 6, -1, -1));
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         btnEntrar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnEntrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icone-entrar.png"))); // NOI18N
@@ -63,21 +58,21 @@ public class ViewPrincipal extends javax.swing.JFrame {
         lblLogin.setForeground(new java.awt.Color(255, 255, 255));
         lblLogin.setText("E-mail:");
         lblLogin.setAlignmentY(0.0F);
-        getContentPane().add(lblLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
+        getContentPane().add(lblLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, -1, -1));
 
         txtEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtEmailActionPerformed(evt);
             }
         });
-        getContentPane().add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 350, 30));
+        getContentPane().add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 350, 30));
 
         lblSenha.setBackground(new java.awt.Color(255, 255, 255));
         lblSenha.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblSenha.setForeground(new java.awt.Color(255, 255, 255));
         lblSenha.setText("Senha:");
-        getContentPane().add(lblSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
-        getContentPane().add(txtSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 350, 30));
+        getContentPane().add(lblSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
+        getContentPane().add(txtSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 350, 30));
 
         btnCadastrar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnCadastrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icone-cadastro.png"))); // NOI18N
@@ -88,6 +83,13 @@ public class ViewPrincipal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 330, 190, 50));
+
+        jLabel1.setFont(new java.awt.Font("SansSerif", 1, 30)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Login");
+        jLabel1.setPreferredSize(new java.awt.Dimension(330, 40));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 450, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/banner-vestindo-certo-00.jpg"))); // NOI18N
         jLabel4.setPreferredSize(new java.awt.Dimension(550, 400));
@@ -166,8 +168,6 @@ public class ViewPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnCadastrar;
     private javax.swing.JButton btnEntrar;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel lblLogin;
     private javax.swing.JLabel lblSenha;

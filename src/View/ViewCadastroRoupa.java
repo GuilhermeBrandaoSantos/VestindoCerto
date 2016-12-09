@@ -56,6 +56,7 @@ public class ViewCadastroRoupa extends javax.swing.JFrame {
         jRadioButtonMenuItem1.setText("jRadioButtonMenuItem1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("CADASTRO DE ROUPA");
         setLocationByPlatform(true);
         setMinimumSize(new java.awt.Dimension(450, 400));
         setSize(new java.awt.Dimension(450, 400));
@@ -94,7 +95,7 @@ public class ViewCadastroRoupa extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 330, 210, 50));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 330, 190, 50));
 
         btnVoltarMenu.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnVoltarMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icone-voltar.png"))); // NOI18N
@@ -104,7 +105,7 @@ public class ViewCadastroRoupa extends javax.swing.JFrame {
                 btnVoltarMenuActionPerformed(evt);
             }
         });
-        getContentPane().add(btnVoltarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 330, 210, 50));
+        getContentPane().add(btnVoltarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 190, 50));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/banner-vestindo-certo-14.jpg"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -224,6 +225,5 @@ public class ViewCadastroRoupa extends javax.swing.JFrame {
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
     private javax.swing.JLabel lblImage;
     private javax.swing.JTextField txtImage;
-    private javax.swing.JTextField txtImage1;
     // End of variables declaration//GEN-END:variables
 }

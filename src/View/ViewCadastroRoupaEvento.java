@@ -49,6 +49,7 @@ public class ViewCadastroRoupaEvento extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("CATEGORIZAÇÃO DO EVENTO");
         setMinimumSize(new java.awt.Dimension(450, 400));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 

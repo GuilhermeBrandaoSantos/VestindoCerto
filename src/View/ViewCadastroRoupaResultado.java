@@ -125,6 +125,7 @@ public class ViewCadastroRoupaResultado extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("REVISÃO DA ROUPA");
         setMinimumSize(new java.awt.Dimension(450, 400));
         setPreferredSize(new java.awt.Dimension(450, 400));
         setSize(new java.awt.Dimension(450, 400));
@@ -164,7 +165,7 @@ public class ViewCadastroRoupaResultado extends javax.swing.JFrame {
                 btnVoltarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, 190, 50));
+        getContentPane().add(btnVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 190, 50));
 
         lblClima.setFont(new java.awt.Font("SansSerif", 1, 30)); // NOI18N
         lblClima.setForeground(new java.awt.Color(255, 255, 255));
@@ -173,7 +174,7 @@ public class ViewCadastroRoupaResultado extends javax.swing.JFrame {
         lblClima.setMaximumSize(new java.awt.Dimension(250, 40));
         lblClima.setMinimumSize(new java.awt.Dimension(250, 40));
         lblClima.setPreferredSize(new java.awt.Dimension(330, 40));
-        getContentPane().add(lblClima, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 450, 40));
+        getContentPane().add(lblClima, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 450, 40));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 51, 51));

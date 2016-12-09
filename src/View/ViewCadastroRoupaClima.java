@@ -49,6 +49,7 @@ public class ViewCadastroRoupaClima extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("CATEGORIZAÇÃO DO CLIMA");
         setMinimumSize(new java.awt.Dimension(450, 400));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -116,7 +117,7 @@ public class ViewCadastroRoupaClima extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/banner-vestindo-certo-15.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 400));
 
-        setSize(new java.awt.Dimension(450, 422));
+        setSize(new java.awt.Dimension(466, 439));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

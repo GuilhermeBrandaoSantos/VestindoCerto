@@ -37,6 +37,7 @@ public class ViewEscolherLocal extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("ESCOLHA DO LOCAL");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         buttonGroupLocal.add(jRadioButton1);
@@ -49,7 +50,7 @@ public class ViewEscolherLocal extends javax.swing.JFrame {
                 jRadioButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, -1, 30));
+        getContentPane().add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, -1, 30));
 
         buttonGroupLocal.add(jRadioButton2);
         jRadioButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -71,7 +72,7 @@ public class ViewEscolherLocal extends javax.swing.JFrame {
         jRadioButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jRadioButton3.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton3.setText("Chácara / Sítio");
-        getContentPane().add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 250, -1, 30));
+        getContentPane().add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 250, -1, 30));
 
         btnVoltarMenu.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnVoltarMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icone-voltar.png"))); // NOI18N

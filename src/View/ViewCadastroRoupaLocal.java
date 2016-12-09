@@ -46,6 +46,7 @@ public class ViewCadastroRoupaLocal extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("CATEGORIZAÇÃO DO LOCAL");
         setMinimumSize(new java.awt.Dimension(450, 400));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -57,7 +58,7 @@ public class ViewCadastroRoupaLocal extends javax.swing.JFrame {
                 jButtonNextActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 330, 180, 50));
+        getContentPane().add(jButtonNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 330, 190, 50));
 
         buttonGroupLocal.add(jRadioButtonCidadeGrande);
         jRadioButtonCidadeGrande.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -88,7 +89,7 @@ public class ViewCadastroRoupaLocal extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Escolha o Local");
         jLabel1.setPreferredSize(new java.awt.Dimension(330, 40));
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, 450, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 450, -1));
 
         btnVoltarMenu.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnVoltarMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icone-voltar.png"))); // NOI18N
@@ -98,7 +99,7 @@ public class ViewCadastroRoupaLocal extends javax.swing.JFrame {
                 btnVoltarMenuActionPerformed(evt);
             }
         });
-        getContentPane().add(btnVoltarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 330, 210, 50));
+        getContentPane().add(btnVoltarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 190, 50));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/banner-vestindo-certo-10.jpg"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
