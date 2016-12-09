@@ -5,6 +5,11 @@
  */
 package View;
 
+import Model.ModelRoupa;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author internet
@@ -14,8 +19,14 @@ public class ViewEscolherClima extends javax.swing.JFrame {
     /**
      * Creates new form ViewEscolherClima
      */
-    public ViewEscolherClima() {
+    ModelRoupa modelRoupa;
+    public ViewEscolherClima(ModelRoupa roupa) {
+        modelRoupa = roupa;
         initComponents();
+    }
+
+    private ViewEscolherClima() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     /**
@@ -28,31 +39,26 @@ public class ViewEscolherClima extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroupClima = new javax.swing.ButtonGroup();
-        rbtnEnsolarado = new javax.swing.JRadioButton();
-        rbtnFrio = new javax.swing.JRadioButton();
+        jRadioButtonSol = new javax.swing.JRadioButton();
         btnProx1 = new javax.swing.JButton();
         lblClima = new javax.swing.JLabel();
-        rbtnNublado = new javax.swing.JRadioButton();
+        jRadioButtonNublado = new javax.swing.JRadioButton();
         btnVoltar = new javax.swing.JButton();
+        jRadioButtonSeco = new javax.swing.JRadioButton();
+        jRadioButtonChuva = new javax.swing.JRadioButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("ESCOLHA DO CLIMA");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        buttonGroupClima.add(rbtnEnsolarado);
-        rbtnEnsolarado.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        rbtnEnsolarado.setForeground(new java.awt.Color(255, 255, 255));
-        rbtnEnsolarado.setText("Ensolarado");
-        rbtnEnsolarado.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        getContentPane().add(rbtnEnsolarado, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 160, 120, 76));
-
-        buttonGroupClima.add(rbtnFrio);
-        rbtnFrio.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        rbtnFrio.setForeground(new java.awt.Color(255, 255, 255));
-        rbtnFrio.setText("Frio");
-        rbtnFrio.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        getContentPane().add(rbtnFrio, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 240, 70, 78));
+        buttonGroupClima.add(jRadioButtonSol);
+        jRadioButtonSol.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jRadioButtonSol.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButtonSol.setSelected(true);
+        jRadioButtonSol.setText("Sol");
+        jRadioButtonSol.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        getContentPane().add(jRadioButtonSol, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 120, 76));
 
         btnProx1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnProx1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icone-proximo.png"))); // NOI18N
@@ -73,18 +79,17 @@ public class ViewEscolherClima extends javax.swing.JFrame {
         lblClima.setPreferredSize(new java.awt.Dimension(330, 40));
         getContentPane().add(lblClima, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 450, 40));
 
-        buttonGroupClima.add(rbtnNublado);
-        rbtnNublado.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        rbtnNublado.setForeground(new java.awt.Color(255, 255, 255));
-        rbtnNublado.setSelected(true);
-        rbtnNublado.setText("Nublado");
-        rbtnNublado.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        rbtnNublado.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroupClima.add(jRadioButtonNublado);
+        jRadioButtonNublado.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jRadioButtonNublado.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButtonNublado.setText("Nublado");
+        jRadioButtonNublado.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jRadioButtonNublado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rbtnNubladoActionPerformed(evt);
+                jRadioButtonNubladoActionPerformed(evt);
             }
         });
-        getContentPane().add(rbtnNublado, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 80, 100, 76));
+        getContentPane().add(jRadioButtonNublado, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, 100, 76));
 
         btnVoltar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icone-voltar.png"))); // NOI18N
@@ -96,6 +101,20 @@ public class ViewEscolherClima extends javax.swing.JFrame {
         });
         getContentPane().add(btnVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 190, 50));
 
+        buttonGroupClima.add(jRadioButtonSeco);
+        jRadioButtonSeco.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jRadioButtonSeco.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButtonSeco.setText("Seco");
+        jRadioButtonSeco.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        getContentPane().add(jRadioButtonSeco, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 230, 100, 78));
+
+        buttonGroupClima.add(jRadioButtonChuva);
+        jRadioButtonChuva.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jRadioButtonChuva.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButtonChuva.setText("Chuva");
+        jRadioButtonChuva.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        getContentPane().add(jRadioButtonChuva, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 100, 100, 78));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/banner-vestindo-certo-15.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 400));
 
@@ -104,20 +123,29 @@ public class ViewEscolherClima extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnProx1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProx1ActionPerformed
-
-        ViewLookGerado look = new ViewLookGerado();
+        //AQUI DEVE SER GRAVADO A ROUPA
+        if(jRadioButtonSol.isSelected()){;
+            modelRoupa.setFkClima(1);
+        }else if(jRadioButtonChuva.isSelected()){
+            modelRoupa.setFkClima(2);
+        }else if(jRadioButtonNublado.isSelected()){
+            modelRoupa.setFkClima(3);
+        }else if(jRadioButtonSeco.isSelected()){
+            modelRoupa.setFkClima(4);
+        }
+        
+        ViewLookGerado look = new ViewLookGerado(modelRoupa);
         look.setVisible(true);
         dispose();
-
     }//GEN-LAST:event_btnProx1ActionPerformed
 
-    private void rbtnNubladoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtnNubladoActionPerformed
+    private void jRadioButtonNubladoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonNubladoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_rbtnNubladoActionPerformed
+    }//GEN-LAST:event_jRadioButtonNubladoActionPerformed
 
     private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
 
-        ViewEscolherEvento evento = new ViewEscolherEvento();
+        ViewEscolherEvento evento = new ViewEscolherEvento(modelRoupa);
         evento.setVisible(true);
         dispose();
     }//GEN-LAST:event_btnVoltarActionPerformed
@@ -162,9 +190,10 @@ public class ViewEscolherClima extends javax.swing.JFrame {
     private javax.swing.JButton btnVoltar;
     private javax.swing.ButtonGroup buttonGroupClima;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JRadioButton jRadioButtonChuva;
+    private javax.swing.JRadioButton jRadioButtonNublado;
+    private javax.swing.JRadioButton jRadioButtonSeco;
+    private javax.swing.JRadioButton jRadioButtonSol;
     private javax.swing.JLabel lblClima;
-    private javax.swing.JRadioButton rbtnEnsolarado;
-    private javax.swing.JRadioButton rbtnFrio;
-    private javax.swing.JRadioButton rbtnNublado;
     // End of variables declaration//GEN-END:variables
 }

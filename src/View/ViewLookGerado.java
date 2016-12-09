@@ -5,6 +5,13 @@
  */
 package View;
 
+import Controller.ControllerLook;
+import Model.ModelRoupa;
+import java.io.File;
+import java.io.IOException;
+import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author internet
@@ -14,8 +21,33 @@ public class ViewLookGerado extends javax.swing.JFrame {
     /**
      * Creates new form ViewLookGerado
      */
-    public ViewLookGerado() {
+    
+    ModelRoupa modelRoupa;
+    public ViewLookGerado(ModelRoupa roupa) throws IOException {
         initComponents();
+        ControllerLook look = new ControllerLook();
+        String imagePath = new File(".").getCanonicalPath()+"/src/ImagesUsuarios/";
+        
+        ModelRoupa modelRoupaTipo01 = new ModelRoupa();
+        modelRoupaTipo01 = roupa;
+        modelRoupaTipo01.setFkTipo(1);
+        //JOptionPane.showMessageDialog(null, modelRoupaTipo01.getFkTipo());
+        ModelRoupa novoLook01 = look.gerarLook(modelRoupaTipo01);
+        //SET IMAGE
+        ImageIcon image01 = new ImageIcon(imagePath+novoLook01.getImagem());
+        jLabelImagem01.setIcon(image01);
+                
+        ModelRoupa modelRoupaTipo02 = new ModelRoupa();
+        modelRoupaTipo02 = roupa;
+        modelRoupaTipo02.setFkTipo(2);
+        //JOptionPane.showMessageDialog(null, modelRoupaTipo02.getFkTipo());
+        ModelRoupa novoLook02 = look.gerarLook(modelRoupaTipo02);
+        ImageIcon image02 = new ImageIcon(imagePath+novoLook02.getImagem());
+        jLabelImagem02.setIcon(image02);        
+    }
+
+    private ViewLookGerado() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     /**
@@ -28,11 +60,10 @@ public class ViewLookGerado extends javax.swing.JFrame {
     private void initComponents() {
 
         btnVoltarMenu = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
-        btnGerar = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jLabelImagem01 = new javax.swing.JLabel();
+        jLabelImagem02 = new javax.swing.JLabel();
+        btnGerar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("LOOK GERADO");
@@ -46,9 +77,17 @@ public class ViewLookGerado extends javax.swing.JFrame {
                 btnVoltarMenuActionPerformed(evt);
             }
         });
-        getContentPane().add(btnVoltarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 190, 50));
+        getContentPane().add(btnVoltarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 460, 190, 50));
 
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jLabel1.setFont(new java.awt.Font("SansSerif", 1, 30)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Este é sua combinação");
+        jLabel1.setFocusTraversalPolicyProvider(true);
+        jLabel1.setPreferredSize(new java.awt.Dimension(330, 40));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, -1));
+        getContentPane().add(jLabelImagem01, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 240, 210));
+        getContentPane().add(jLabelImagem02, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 250, 240, 210));
 
         btnGerar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnGerar.setText("Gerar Novo");
@@ -62,45 +101,28 @@ public class ViewLookGerado extends javax.swing.JFrame {
                 btnGerarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnGerar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, 190, 50));
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/banner-vestindo-certo-09.jpg"))); // NOI18N
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -300, 450, 400));
-
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 420, 90));
-
-        jLabel1.setFont(new java.awt.Font("SansSerif", 1, 30)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Este é sua combinação");
-        jLabel1.setFocusTraversalPolicyProvider(true);
-        jLabel1.setPreferredSize(new java.awt.Dimension(330, 40));
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 450, -1));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/banner-vestindo-certo-09.jpg"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 400));
+        getContentPane().add(btnGerar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 460, 190, 50));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnVoltarMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarMenuActionPerformed
+        ViewEscolherClima clima = new ViewEscolherClima(modelRoupa);
+        clima.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnVoltarMenuActionPerformed
+
     private void btnGerarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGerarActionPerformed
-            
+
         ViewEscolherLocal local = new ViewEscolherLocal();
         local.setVisible(true);
-        dispose();        
+        dispose();
     }//GEN-LAST:event_btnGerarActionPerformed
 
     private void btnGerarStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_btnGerarStateChanged
         // TODO add your handling code here:
     }//GEN-LAST:event_btnGerarStateChanged
-
-    private void btnVoltarMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarMenuActionPerformed
-
-        ViewEscolherClima clima = new ViewEscolherClima();
-        clima.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_btnVoltarMenuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -141,8 +163,7 @@ public class ViewLookGerado extends javax.swing.JFrame {
     private javax.swing.JButton btnGerar;
     private javax.swing.JButton btnVoltarMenu;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jLabelImagem01;
+    private javax.swing.JLabel jLabelImagem02;
     // End of variables declaration//GEN-END:variables
 }

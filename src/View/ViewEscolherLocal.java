@@ -5,6 +5,8 @@
  */
 package View;
 
+import Model.ModelRoupa;
+
 /**
  *
  * @author internet
@@ -14,6 +16,7 @@ public class ViewEscolherLocal extends javax.swing.JFrame {
     /**
      * Creates new form ViewEscolherLocal
      */
+    ModelRoupa modelRoupa = new ModelRoupa();
     public ViewEscolherLocal() {
         initComponents();
     }
@@ -28,10 +31,10 @@ public class ViewEscolherLocal extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroupLocal = new javax.swing.ButtonGroup();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        jRadioButtonCidadeGrande = new javax.swing.JRadioButton();
+        jRadioButtonCidadeInterior = new javax.swing.JRadioButton();
         bntEscolherEvento = new javax.swing.JButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
+        jRadioButtonChacaraSitio = new javax.swing.JRadioButton();
         btnVoltarMenu = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -40,23 +43,23 @@ public class ViewEscolherLocal extends javax.swing.JFrame {
         setTitle("ESCOLHA DO LOCAL");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        buttonGroupLocal.add(jRadioButton1);
-        jRadioButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton1.setSelected(true);
-        jRadioButton1.setText("Cidade Grande");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroupLocal.add(jRadioButtonCidadeGrande);
+        jRadioButtonCidadeGrande.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jRadioButtonCidadeGrande.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButtonCidadeGrande.setSelected(true);
+        jRadioButtonCidadeGrande.setText("Cidade Grande");
+        jRadioButtonCidadeGrande.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                jRadioButtonCidadeGrandeActionPerformed(evt);
             }
         });
-        getContentPane().add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, -1, 30));
+        getContentPane().add(jRadioButtonCidadeGrande, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, -1, 30));
 
-        buttonGroupLocal.add(jRadioButton2);
-        jRadioButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton2.setText("Cidade Interior");
-        getContentPane().add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, -1, 30));
+        buttonGroupLocal.add(jRadioButtonCidadeInterior);
+        jRadioButtonCidadeInterior.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jRadioButtonCidadeInterior.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButtonCidadeInterior.setText("Cidade Interior");
+        getContentPane().add(jRadioButtonCidadeInterior, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, -1, 30));
 
         bntEscolherEvento.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         bntEscolherEvento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icone-proximo.png"))); // NOI18N
@@ -68,11 +71,11 @@ public class ViewEscolherLocal extends javax.swing.JFrame {
         });
         getContentPane().add(bntEscolherEvento, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 330, 190, 50));
 
-        buttonGroupLocal.add(jRadioButton3);
-        jRadioButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jRadioButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton3.setText("Chácara / Sítio");
-        getContentPane().add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 250, -1, 30));
+        buttonGroupLocal.add(jRadioButtonChacaraSitio);
+        jRadioButtonChacaraSitio.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jRadioButtonChacaraSitio.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButtonChacaraSitio.setText("Chácara / Sítio");
+        getContentPane().add(jRadioButtonChacaraSitio, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 250, -1, 30));
 
         btnVoltarMenu.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnVoltarMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icone-voltar.png"))); // NOI18N
@@ -98,16 +101,23 @@ public class ViewEscolherLocal extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+    private void jRadioButtonCidadeGrandeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonCidadeGrandeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    }//GEN-LAST:event_jRadioButtonCidadeGrandeActionPerformed
 
     private void bntEscolherEventoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntEscolherEventoActionPerformed
 
-        ViewEscolherEvento evento = new ViewEscolherEvento();
+        if(jRadioButtonCidadeGrande.isSelected()){;
+            modelRoupa.setFkLocal(1);
+        }else if(jRadioButtonCidadeInterior.isSelected()){
+            modelRoupa.setFkLocal(2);
+        }else if(jRadioButtonChacaraSitio.isSelected()){
+            modelRoupa.setFkLocal(3);
+        }
+        
+        ViewEscolherEvento evento = new ViewEscolherEvento(modelRoupa);
         evento.setVisible(true);
         dispose();
-
     }//GEN-LAST:event_bntEscolherEventoActionPerformed
 
     private void btnVoltarMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarMenuActionPerformed
@@ -158,8 +168,8 @@ public class ViewEscolherLocal extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroupLocal;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
+    private javax.swing.JRadioButton jRadioButtonChacaraSitio;
+    private javax.swing.JRadioButton jRadioButtonCidadeGrande;
+    private javax.swing.JRadioButton jRadioButtonCidadeInterior;
     // End of variables declaration//GEN-END:variables
 }

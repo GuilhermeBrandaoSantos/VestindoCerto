@@ -5,6 +5,8 @@
  */
 package View;
 
+import Model.ModelRoupa;
+
 /**
  *
  * @author internet
@@ -14,8 +16,14 @@ public class ViewEscolherEvento extends javax.swing.JFrame {
     /**
      * Creates new form ViewEscolherEvento
      */
-    public ViewEscolherEvento() {
+    ModelRoupa modelRoupa;
+    public ViewEscolherEvento(ModelRoupa roupa) {
         initComponents();
+        modelRoupa = roupa;
+    }
+
+    private ViewEscolherEvento() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     /**
@@ -28,14 +36,14 @@ public class ViewEscolherEvento extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroupEvento = new javax.swing.ButtonGroup();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
+        jRadioButtonFaculdade = new javax.swing.JRadioButton();
+        jRadioButtonTrabalho = new javax.swing.JRadioButton();
+        jRadioButtonFesta = new javax.swing.JRadioButton();
         btnGerarLook = new javax.swing.JButton();
         lblEvento = new javax.swing.JLabel();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jRadioButton5 = new javax.swing.JRadioButton();
-        jRadioButton6 = new javax.swing.JRadioButton();
+        jRadioButtonBalada = new javax.swing.JRadioButton();
+        jRadioButtonCasamento = new javax.swing.JRadioButton();
+        jRadioButtonAcademia = new javax.swing.JRadioButton();
         btnVoltarMenu = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
@@ -43,29 +51,29 @@ public class ViewEscolherEvento extends javax.swing.JFrame {
         setTitle("ESCOLHA DO EVENTO");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        buttonGroupEvento.add(jRadioButton1);
-        jRadioButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton1.setSelected(true);
-        jRadioButton1.setText("Faculdade");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroupEvento.add(jRadioButtonFaculdade);
+        jRadioButtonFaculdade.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jRadioButtonFaculdade.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButtonFaculdade.setSelected(true);
+        jRadioButtonFaculdade.setText("Faculdade");
+        jRadioButtonFaculdade.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                jRadioButtonFaculdadeActionPerformed(evt);
             }
         });
-        getContentPane().add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, -1, -1));
+        getContentPane().add(jRadioButtonFaculdade, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, -1, -1));
 
-        buttonGroupEvento.add(jRadioButton2);
-        jRadioButton2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton2.setText("Trabalho");
-        getContentPane().add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 250, -1, -1));
+        buttonGroupEvento.add(jRadioButtonTrabalho);
+        jRadioButtonTrabalho.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jRadioButtonTrabalho.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButtonTrabalho.setText("Trabalho");
+        getContentPane().add(jRadioButtonTrabalho, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 110, -1, -1));
 
-        buttonGroupEvento.add(jRadioButton3);
-        jRadioButton3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jRadioButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton3.setText("Festa Infantíl");
-        getContentPane().add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 110, -1, -1));
+        buttonGroupEvento.add(jRadioButtonFesta);
+        jRadioButtonFesta.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jRadioButtonFesta.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButtonFesta.setText("Festa");
+        getContentPane().add(jRadioButtonFesta, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 180, -1, -1));
 
         btnGerarLook.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnGerarLook.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icone-proximo.png"))); // NOI18N
@@ -86,23 +94,23 @@ public class ViewEscolherEvento extends javax.swing.JFrame {
         lblEvento.setPreferredSize(new java.awt.Dimension(330, 40));
         getContentPane().add(lblEvento, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 450, -1));
 
-        buttonGroupEvento.add(jRadioButton4);
-        jRadioButton4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jRadioButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton4.setText("Balada");
-        getContentPane().add(jRadioButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 180, -1, -1));
+        buttonGroupEvento.add(jRadioButtonBalada);
+        jRadioButtonBalada.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jRadioButtonBalada.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButtonBalada.setText("Balada");
+        getContentPane().add(jRadioButtonBalada, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 180, -1, -1));
 
-        buttonGroupEvento.add(jRadioButton5);
-        jRadioButton5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jRadioButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton5.setText("Casamento");
-        getContentPane().add(jRadioButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 250, -1, -1));
+        buttonGroupEvento.add(jRadioButtonCasamento);
+        jRadioButtonCasamento.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jRadioButtonCasamento.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButtonCasamento.setText("Casamento");
+        getContentPane().add(jRadioButtonCasamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 250, -1, -1));
 
-        buttonGroupEvento.add(jRadioButton6);
-        jRadioButton6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jRadioButton6.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton6.setText("Passeio");
-        getContentPane().add(jRadioButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 180, -1, -1));
+        buttonGroupEvento.add(jRadioButtonAcademia);
+        jRadioButtonAcademia.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jRadioButtonAcademia.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButtonAcademia.setText("Academia");
+        getContentPane().add(jRadioButtonAcademia, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 250, -1, -1));
 
         btnVoltarMenu.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnVoltarMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icone-voltar.png"))); // NOI18N
@@ -121,13 +129,26 @@ public class ViewEscolherEvento extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+    private void jRadioButtonFaculdadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonFaculdadeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    }//GEN-LAST:event_jRadioButtonFaculdadeActionPerformed
 
     private void btnGerarLookActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGerarLookActionPerformed
-
-        ViewEscolherClima clima = new ViewEscolherClima();
+        if(jRadioButtonFaculdade.isSelected()){;
+            modelRoupa.setFkEvento(1);
+        }else if(jRadioButtonTrabalho.isSelected()){
+            modelRoupa.setFkEvento(2);
+        }else if(jRadioButtonFesta.isSelected()){
+            modelRoupa.setFkEvento(3);
+        }else if(jRadioButtonBalada.isSelected()){
+            modelRoupa.setFkEvento(4);
+        }else if(jRadioButtonCasamento.isSelected()){
+            modelRoupa.setFkEvento(5);
+        }else if(jRadioButtonAcademia.isSelected()){
+            modelRoupa.setFkEvento(6);
+        }
+        
+        ViewEscolherClima clima = new ViewEscolherClima(modelRoupa);
         clima.setVisible(true);
         dispose();
 
@@ -180,12 +201,12 @@ public class ViewEscolherEvento extends javax.swing.JFrame {
     private javax.swing.JButton btnVoltarMenu;
     private javax.swing.ButtonGroup buttonGroupEvento;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
+    private javax.swing.JRadioButton jRadioButtonAcademia;
+    private javax.swing.JRadioButton jRadioButtonBalada;
+    private javax.swing.JRadioButton jRadioButtonCasamento;
+    private javax.swing.JRadioButton jRadioButtonFaculdade;
+    private javax.swing.JRadioButton jRadioButtonFesta;
+    private javax.swing.JRadioButton jRadioButtonTrabalho;
     private javax.swing.JLabel lblEvento;
     // End of variables declaration//GEN-END:variables
 }

@@ -150,18 +150,18 @@ public class ViewCadastroRoupaResultado extends javax.swing.JFrame {
         jLabelClima.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabelClima.setForeground(new java.awt.Color(240, 240, 240));
         jLabelClima.setText("CLIMA:");
-        getContentPane().add(jLabelClima, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, 210, 20));
+        getContentPane().add(jLabelClima, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, 190, 20));
         getContentPane().add(jLabelImagem, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 240, 210));
 
         jLabelLocal.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabelLocal.setForeground(new java.awt.Color(240, 240, 240));
         jLabelLocal.setText("LOCAL:");
-        getContentPane().add(jLabelLocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 170, 260, 20));
+        getContentPane().add(jLabelLocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 170, 190, 20));
 
         jLabelEvento.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabelEvento.setForeground(new java.awt.Color(240, 240, 240));
         jLabelEvento.setText("EVENTO:");
-        getContentPane().add(jLabelEvento, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 220, 230, 20));
+        getContentPane().add(jLabelEvento, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 220, 180, 20));
 
         btnGravar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnGravar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icone-gravar.png"))); // NOI18N
@@ -195,7 +195,7 @@ public class ViewCadastroRoupaResultado extends javax.swing.JFrame {
         jLabelTipo.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabelTipo.setForeground(new java.awt.Color(240, 240, 240));
         jLabelTipo.setText("TIPO:");
-        getContentPane().add(jLabelTipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 120, 260, 20));
+        getContentPane().add(jLabelTipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 120, 190, 20));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 51, 51));

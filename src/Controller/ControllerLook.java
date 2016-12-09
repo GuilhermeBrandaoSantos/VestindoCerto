@@ -5,10 +5,23 @@
  */
 package Controller;
 
+import DAO.DAORoupa;
+import Model.ModelRoupa;
+import Model.ModelUsuario;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author internet
  */
 public class ControllerLook {
-    
+    public ModelRoupa gerarLook(ModelRoupa modelRoupa){
+        DAORoupa daoRoupa = new DAORoupa();
+        ModelRoupa novaRoupa = new ModelRoupa();
+        
+        novaRoupa = daoRoupa.gerarLook(modelRoupa);
+        
+        return novaRoupa;
+    }
 }
