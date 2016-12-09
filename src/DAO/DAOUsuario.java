@@ -81,4 +81,30 @@ public class DAOUsuario {
             return false;
         }
     }
+    
+    public boolean updateUsuario(ModelUsuario modelUsuario) throws SQLException {
+        String sql = "";
+        sql += "update usuario set nome=?, email=?, senha=?";
+        
+        try {
+            ModelConexaoMysql conexao = new ModelConexaoMysql();
+            PreparedStatement stmt = conexao.getConexao().prepareStatement(sql);
+
+            System.out.println(modelUsuario.getNome());
+            stmt.setString(1, modelUsuario.getNome());
+            stmt.setString(2, modelUsuario.getEmail());
+            stmt.setString(3, modelUsuario.getSenha());
+
+            stmt.addBatch();
+            System.out.println(sql);
+            
+            stmt.executeBatch();
+            stmt.close();
+            conexao.getConexao().close();
+            return true;
+        }catch(SQLException sqlEx){
+            System.out.println(sqlEx.getMessage());
+            return false;
+        }
+    }
 }

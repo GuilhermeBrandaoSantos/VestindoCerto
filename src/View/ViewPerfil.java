@@ -5,6 +5,13 @@
  */
 package View;
 
+import Controller.ControllerUsuario;
+import Model.ModelUsuario;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author internet
@@ -33,9 +40,9 @@ public class ViewPerfil extends javax.swing.JFrame {
         jLabelEmail = new javax.swing.JLabel();
         btnVoltarMenu1 = new javax.swing.JButton();
         btnAlterarSenha1 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
+        jTextFieldNome = new javax.swing.JTextField();
+        jTextFieldEmail = new javax.swing.JTextField();
+        jTextFieldSenha = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -82,9 +89,9 @@ public class ViewPerfil extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnAlterarSenha1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 330, -1, 50));
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, 220, 25));
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, 220, 25));
-        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 200, 220, 25));
+        getContentPane().add(jTextFieldNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, 220, 25));
+        getContentPane().add(jTextFieldEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, 220, 25));
+        getContentPane().add(jTextFieldSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 200, 220, 25));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/banner-vestindo-certo-12.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 400));
@@ -102,6 +109,27 @@ public class ViewPerfil extends javax.swing.JFrame {
 
     private void btnAlterarSenha1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlterarSenha1ActionPerformed
         // TODO add your handling code here:
+        String dados[] = new String[4];
+        ControllerUsuario usuario = new ControllerUsuario();
+        boolean controle;
+        
+        dados[0] = jTextFieldNome.getText();
+        dados[1] = jTextFieldEmail.getText();
+        dados[2] = jTextFieldSenha.getText();
+        
+        try {
+            controle = usuario.updateUsuario(dados);
+            if(controle){
+                JOptionPane.showMessageDialog(null, "Cadastro alterado com sucesso.");
+                ViewMenu viewMenu = new ViewMenu();
+                viewMenu.setVisible(true);
+                dispose();   
+            }else{
+                JOptionPane.showMessageDialog(null, "Cadastro NÃO alterado.");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(ViewPerfil.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_btnAlterarSenha1ActionPerformed
 
     /**
@@ -148,8 +176,8 @@ public class ViewPerfil extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelEmail;
     private javax.swing.JLabel jLabelNome;
     private javax.swing.JLabel jLabelSenha;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextFieldEmail;
+    private javax.swing.JTextField jTextFieldNome;
+    private javax.swing.JTextField jTextFieldSenha;
     // End of variables declaration//GEN-END:variables
 }
