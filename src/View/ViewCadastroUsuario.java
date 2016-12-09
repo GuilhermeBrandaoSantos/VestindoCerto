@@ -44,6 +44,7 @@ public class ViewCadastroUsuario extends javax.swing.JFrame {
         txtSenha = new javax.swing.JPasswordField();
         txtSenhaConfirmar = new javax.swing.JPasswordField();
         bntCadastrar = new javax.swing.JButton();
+        btnVoltar = new javax.swing.JButton();
         btnLimpar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -100,7 +101,17 @@ public class ViewCadastroUsuario extends javax.swing.JFrame {
                 bntCadastrarActionPerformed(evt);
             }
         });
-        jPanel1.add(bntCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 190, 50));
+        jPanel1.add(bntCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 250, 150, 50));
+
+        btnVoltar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btnVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icone-voltar.png"))); // NOI18N
+        btnVoltar.setText("Voltar");
+        btnVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 120, 50));
 
         btnLimpar.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         btnLimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/icone-limpar.png"))); // NOI18N
@@ -110,7 +121,7 @@ public class ViewCadastroUsuario extends javax.swing.JFrame {
                 btnLimparActionPerformed(evt);
             }
         });
-        jPanel1.add(btnLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 250, 190, 50));
+        jPanel1.add(btnLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 250, 120, 50));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/banner-vestindo-certo-00.jpg"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -80, -1, 400));
@@ -168,6 +179,13 @@ public class ViewCadastroUsuario extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtSenhaActionPerformed
 
+    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
+
+        ViewPrincipal principal = new ViewPrincipal();
+        principal.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnVoltarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -206,6 +224,7 @@ public class ViewCadastroUsuario extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bntCadastrar;
     private javax.swing.JButton btnLimpar;
+    private javax.swing.JButton btnVoltar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
